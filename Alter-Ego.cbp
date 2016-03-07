@@ -44,7 +44,6 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="../Alter Ego/src/main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
