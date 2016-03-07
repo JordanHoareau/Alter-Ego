@@ -15,6 +15,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
+					<Add directory="include/GameEngine" />
 				</Compiler>
 				<Linker>
 					<Add library="lib\libsfml-graphics-d.a" />
@@ -31,6 +32,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include" />
+					<Add directory="include/GameEngine" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -45,7 +47,9 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/GameEngine/GameEngine.h" />
+		<Unit filename="include/GameEngine/GameState.h" />
 		<Unit filename="src/GameEngine/GameEngine.cpp" />
+		<Unit filename="src/GameEngine/GameState.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
