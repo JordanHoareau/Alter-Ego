@@ -1,24 +1,18 @@
-#include <SFML/Graphics.hpp>
+#include "GameEngine/GameEngine.h"
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    GameEngine game;
+    game.init("Alter Ego");
 
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
 
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
+    while(game.isRunning()){
+		game.handleEvents();
+//		game.update();
+//		game.draw();
+	}
 
-    return 0;
+//	game.cleanup();
+
+	return 0;
 }

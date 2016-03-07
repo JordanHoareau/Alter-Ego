@@ -44,6 +44,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/GameEngine/GameEngine.h" />
+		<Unit filename="src/GameEngine/GameEngine.cpp" />
+		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
