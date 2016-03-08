@@ -17,6 +17,7 @@
 					<Add option="-g" />
 					<Add directory="include" />
 					<Add directory="include/GameEngine" />
+					<Add directory="include/GameCharacter" />
 				</Compiler>
 				<Linker>
 					<Add library="lib\libsfml-graphics-d.a" />
@@ -35,6 +36,7 @@
 					<Add option="-O2" />
 					<Add directory="include" />
 					<Add directory="include/GameEngine" />
+					<Add directory="include/GameCharacter" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -46,36 +48,48 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-std=c++11" />
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/Character.h" />
 		<Unit filename="include/Constants.h" />
 		<Unit filename="include/GameCharacter/Agility.h" />
 		<Unit filename="include/GameCharacter/CharStat.h" />
-		<Unit filename="include/GameCharacter/CharStats.h" />
 		<Unit filename="include/GameCharacter/Character.h" />
 		<Unit filename="include/GameCharacter/Stats.h" />
+		<Unit filename="include/GameCharacter/StatsPool.h" />
 		<Unit filename="include/GameCharacter/Strength.h" />
 		<Unit filename="include/GameCharacter/Toughness.h" />
+		<Unit filename="include/GameEngine/BattleState.h" />
 		<Unit filename="include/GameEngine/CinematicState.h" />
+		<Unit filename="include/GameEngine/GameContext.h" />
 		<Unit filename="include/GameEngine/GameEngine.h" />
 		<Unit filename="include/GameEngine/GameState.h" />
 		<Unit filename="include/GameEngine/IntroState.h" />
+		<Unit filename="include/GameEngine/InventoryState.h" />
+		<Unit filename="include/GameEngine/MenuState.h" />
 		<Unit filename="include/GameEngine/MoveState.h" />
+		<Unit filename="include/GameEngine/PlayContext.h" />
 		<Unit filename="include/GameEngine/PlayState.h" />
-		<Unit filename="src/CharStats.cpp" />
-		<Unit filename="src/Character.cpp" />
+		<Unit filename="include/GameEngine/QuestState.h" />
+		<Unit filename="include/GameEngine/SettingsState.h" />
 		<Unit filename="src/GameCharacter/Agility.cpp" />
 		<Unit filename="src/GameCharacter/CharStat.cpp" />
-		<Unit filename="src/GameCharacter/Character.cpp" />
 		<Unit filename="src/GameCharacter/Stats.cpp" />
+		<Unit filename="src/GameCharacter/StatsPool.cpp" />
 		<Unit filename="src/GameCharacter/Strength.cpp" />
 		<Unit filename="src/GameCharacter/Toughness.cpp" />
+		<Unit filename="src/GameEngine/BattleState.cpp" />
 		<Unit filename="src/GameEngine/CinematicState.cpp" />
 		<Unit filename="src/GameEngine/GameEngine.cpp" />
 		<Unit filename="src/GameEngine/IntroState.cpp" />
+		<Unit filename="src/GameEngine/InventoryState.cpp" />
+		<Unit filename="src/GameEngine/MenuState.cpp" />
 		<Unit filename="src/GameEngine/MoveState.cpp" />
+		<Unit filename="src/GameEngine/PlayContext.cpp" />
 		<Unit filename="src/GameEngine/PlayState.cpp" />
+		<Unit filename="src/GameEngine/QuestState.cpp" />
+		<Unit filename="src/GameEngine/SettingsState.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />

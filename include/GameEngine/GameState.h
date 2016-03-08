@@ -2,6 +2,7 @@
 #define GAMESTATE_H
 
 #include "GameEngine.h"
+#include "GameContext.h"
 
 class GameState
 {
@@ -24,6 +25,9 @@ class GameState
             state.print(flux) ;
             return flux;
         }
+    protected:
+        GameContext m_context;
+    private:
 };
 
 #endif // GAMESTATE_H
