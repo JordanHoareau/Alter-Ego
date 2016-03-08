@@ -1,10 +1,7 @@
 #ifndef STATS_H
 #define STATS_H
 
-#include "Strength.h"
-#include "Agility.h"
-#include "Toughness.h"
-#include "CharStats.h"
+#include "GameCharacter/Stats.h"
 
 /* ******************************************** */
 /*                     Stats                    */
@@ -23,10 +20,10 @@ class Stats
         virtual ~Stats();
 
         // Primary calculation methods
-        virtual int getHealth() =0;         // Health
+        virtual int getHealth() =0;
         virtual int getSpellDamage() =0;    // Damage bonus : class spells
         virtual int getWeaponDamage() =0;   // Damage bonus : weapon spells
-        virtual int getResistance() =0;     // Resistance
+        virtual int getResistance() =0;
         virtual int getCritChance() =0;     // Critical Hit Chance (150% base damage)
         virtual int getSpeed() =0;          // Speed
 
@@ -36,10 +33,10 @@ class Stats
     protected:
 
     private:
-        int m_Health;                       // Health
+        int m_Health;
         int m_SpellDamage;                  // Damage bonus : class spells
         int m_WeaponDamage;                 // Damage bonus : weapon spells
-        int m_Resistance;                   // Resistance
+        int m_Resistance;
         int m_CritChance;                   // Critical Hit Chance (150% base damage)
         int m_Speed;                        // Speed
 };

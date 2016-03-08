@@ -19,6 +19,13 @@ class Agility: public Stats
         Agility(int value);
         virtual ~Agility();
 
+        virtual int getHealth();
+        virtual int getSpellDamage();    // Damage bonus : class spells
+        virtual int getWeaponDamage();   // Damage bonus : weapon spells
+        virtual int getResistance();
+        virtual int getCritChance() =0;     // Critical Hit Chance (150% base damage)
+        virtual int getSpeed() =0;          // Speed
+
     protected:
 
     private:
