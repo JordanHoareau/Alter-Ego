@@ -13,7 +13,6 @@ int main(int argc, char *argv[]){
 		game.update();
 		game.draw();
 	}
-
 	game.cleanup();
 
 	return 0;
