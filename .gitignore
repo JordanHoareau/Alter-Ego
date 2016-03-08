@@ -1,8 +1,2 @@
 *.exe
 main.cpp
-<<<<<<< HEAD
-*.depend
-src/main.cpp
-=======
-Alter-Ego.depend
->>>>>>> origin/master
