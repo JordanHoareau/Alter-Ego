@@ -1,7 +1,2 @@
-
-*.layout
-*.o
-*.a
-*.depend
 *.exe
 main.cpp
