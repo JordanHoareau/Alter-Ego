@@ -20,10 +20,6 @@ class GameState
             flux << "state";
         }
 
-        void changeState(GameEngine *game, GameState *state){
-            game->changeState(state);
-        }
-
         friend ostream &operator<<(ostream &flux, GameState const& state){
             state.print(flux) ;
             return flux;

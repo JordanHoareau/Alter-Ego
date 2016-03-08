@@ -5,6 +5,7 @@
 #include <vector>
 #include <iostream>
 using namespace std;
+#include <string>
 
 #include "Constants.h"
 class GameState;
@@ -12,7 +13,7 @@ class GameState;
 class GameEngine
 {
     public:
-        void init(const char* title, int width=640, int height=480);
+        void init(const string* title, int width=640, int height=480);
         void cleanup();
 
         void changeState(GameState *state);
@@ -27,11 +28,11 @@ class GameEngine
         bool isRunning() { return m_running; }
         void quit() { m_running = false; }
 
-        sf::RenderWindow m_window;
+        sf::RenderWindow m_window;                          //  SFML window, main screen of game
 
     private:
-        vector<GameState*> states;
-        bool m_running;
+        vector<GameState*> states;                          //  Stack of game states
+        bool m_running;                                     //  boolean which say if the game is running or not
 };
 
 #endif // GAMEENGINE_H
