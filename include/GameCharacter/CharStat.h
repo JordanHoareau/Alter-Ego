@@ -31,6 +31,7 @@ class CharStat: public Stats
         int m_resistance;
         int m_crit_chance;
         int m_speed;
+        StatsPool m_pool;
 };
 
 #endif // CHARSTAT_H

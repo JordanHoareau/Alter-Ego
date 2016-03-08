@@ -21,6 +21,8 @@ class Agility: public Stats
         virtual ~Agility();
 
         virtual int getValue();
+        virtual void setValue(int value);
+
 
     protected:
 

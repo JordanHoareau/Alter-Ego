@@ -29,3 +29,8 @@ int Agility::getValue()
 {
     return m_value;
 }
+
+void Agility::setValue(int value)
+{
+    m_value = value;
+}

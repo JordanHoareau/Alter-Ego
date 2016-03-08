@@ -20,6 +20,7 @@ class Toughness: public Stats
         virtual ~Toughness();
 
         virtual int getValue();
+        virtual void setValue(int value);
     protected:
 
     private:

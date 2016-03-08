@@ -29,3 +29,8 @@ int Toughness::getValue()
 {
     return m_value;
 }
+
+void Toughness::setValue(int value)
+{
+    m_value = value;
+}

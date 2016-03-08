@@ -2,18 +2,20 @@
 #define STATSPOOL_H
 
 #include "Stats.h"
+#include "Strength.h"
+#include "Agility.h"
+#include "Toughness.h"
+#include <unordered_map>
 
-class StatsPool: public Stats
+class StatsPool
 {
     public:
-        StatsPool();
-
-        virtual int getValue();
-
+        void setPool(Strength stg,
+                     Agility agi,
+                     Toughness tgh);
     protected:
-
+        std::unordered_map<std::string,Stats&> pool;
     private:
-        Stats pool[];
 };
 
 #endif // STATSPOOL_H

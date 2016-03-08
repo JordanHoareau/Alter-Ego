@@ -20,6 +20,7 @@ class Strength: public Stats
         virtual ~Strength();
 
         virtual int getValue();
+        virtual void setValue(int value);
 
     protected:
 

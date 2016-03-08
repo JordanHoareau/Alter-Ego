@@ -29,3 +29,8 @@ int Strength::getValue()
 {
     return m_value;
 }
+
+void Strength::setValue(int value)
+{
+    m_value = value;
+}

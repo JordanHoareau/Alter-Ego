@@ -13,9 +13,10 @@
 class Stats
 {
     public:
-        Stats();
+        virtual ~Stats(){}
 
         virtual int getValue() = 0;
+        virtual void setValue(int value) = 0;
 
     protected:
 
