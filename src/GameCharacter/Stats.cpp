@@ -24,7 +24,7 @@ Stats::Stats(int health, int spell_damage, int weapon_damage, int resistance, in
 {
     m_health = health;
     m_spell_damage = spell_damage;
-    m_weapon_damage = weapon_damage;
+    m_weapon_damage = 0;
     m_resistance = resistance;
     m_crit_chance = crit_chance;
     m_speed = speed;
