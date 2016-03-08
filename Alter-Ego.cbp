@@ -49,12 +49,16 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/Constants.h" />
+		<Unit filename="include/GameEngine/CinematicState.h" />
 		<Unit filename="include/GameEngine/GameEngine.h" />
 		<Unit filename="include/GameEngine/GameState.h" />
 		<Unit filename="include/GameEngine/IntroState.h" />
+		<Unit filename="include/GameEngine/MoveState.h" />
 		<Unit filename="include/GameEngine/PlayState.h" />
+		<Unit filename="src/GameEngine/CinematicState.cpp" />
 		<Unit filename="src/GameEngine/GameEngine.cpp" />
 		<Unit filename="src/GameEngine/IntroState.cpp" />
+		<Unit filename="src/GameEngine/MoveState.cpp" />
 		<Unit filename="src/GameEngine/PlayState.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
