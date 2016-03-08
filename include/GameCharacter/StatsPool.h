@@ -13,8 +13,10 @@ class StatsPool
         void setPool(Strength stg,
                      Agility agi,
                      Toughness tgh);
+
+        std::unordered_map<std::string,Stats&> getPool();
     protected:
-        std::unordered_map<std::string,Stats&> pool;
+        std::unordered_map<std::string,Stats&> m_pool;
     private:
 };
 

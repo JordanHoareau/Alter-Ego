@@ -1,7 +1,11 @@
 #include "StatsPool.h"
 
-void StatsPool::setPool(Strength stg, Agility agi, Toughness tgh){
-    pool =  {   {"Strength",stg},
-                {"Agility",agi},
-                {"Toughness",tgh}};
+void StatsPool::setPool(Strength str, Agility agi, Toughness tgh){
+    m_pool =  {     {"Strength",str},
+                    {"Agility",agi},
+                    {"Toughness",tgh}};
+}
+
+std::unordered_map<std::string,Stats&> StatsPool::getPool(){
+    return m_pool;
 }

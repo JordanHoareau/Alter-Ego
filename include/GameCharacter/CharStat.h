@@ -1,8 +1,12 @@
 #ifndef CHARSTAT_H
 #define CHARSTAT_H
 
+#include "Constants.h"
 #include "Stats.h"
 #include "StatsPool.h"
+#include "Strength.h"
+#include "Agility.h"
+#include "Toughness.h"
 /* ******************************************** */
 /*                  CharStats                   */
 /* Gather visible values to player              */
@@ -16,11 +20,13 @@ class CharStat: public Stats
 {
     public:
         CharStat();
-        CharStat(int health, int spell_damage, int weapon_damage, int resistance, int crit_chance, int speed);
+        CharStat(Strength str, Agility agi, Toughness tgh);
         virtual ~CharStat();
 
         // Setting stats method
         virtual void setStats();
+
+        void initStatPool(Strength str, Agility agi, Toughness tgh);
 
     protected:
 

@@ -19,14 +19,33 @@ CharStat::CharStat()
     m_speed = 0;
 }
 
-CharStat::CharStat(int health, int spell_damage, int weapon_damage, int resistance, int crit_chance, int speed)
+CharStat::CharStat(Strength str, Agility agi, Toughness tgh)
 {
-    m_health = health;
-    m_spell_damage = spell_damage;
-    m_weapon_damage = weapon_damage;
-    m_resistance = resistance;
-    m_crit_chance = crit_chance;
-    m_speed = speed;
+    m_health =  str.getValue()*Constants::StrengthHealthRatio
+             +  tgh.getValue()*Constants::ToughnessHealthRatio
+             +  agi.getValue()*Constants::AgilityHealthRatio;
+
+    m_spell_damage =  str.getValue()*Constants::StrengthSpellDmgRatio
+                   +  tgh.getValue()*Constants::ToughnessSpellDmgRatio
+                   +  agi.getValue()*Constants::AgilitySpellDmgRatio;
+
+    m_weapon_damage =  str.getValue()*Constants::StrengthWeaponDmgRatio
+                    +  tgh.getValue()*Constants::ToughnessWeaponDmgRatio
+                    +  agi.getValue()*Constants::AgilityWeaponDmgRatio;
+
+    m_resistance =  str.getValue()*Constants::StrengthResistanceRatio
+                 +  tgh.getValue()*Constants::ToughnessResistanceRatio
+                 +  agi.getValue()*Constants::AgilityResistanceRatio;
+
+    m_crit_chance = str.getValue()*Constants::StrengthCritChanceRatio
+                  + tgh.getValue()*Constants::ToughnessCritChanceRatio
+                  + agi.getValue()*Constants::AgilityCritChanceRatio;
+
+    m_speed =       str.getValue()*Constants::StrengthSpeedRatio
+                 +  tgh.getValue()*Constants::ToughnessSpeedRatio
+                 +  agi.getValue()*Constants::AgilitySpeedRatio;
+
+    m_pool.setPool(str, agi, tgh);
 }
 
 CharStat::~CharStat()
@@ -36,4 +55,8 @@ CharStat::~CharStat()
 
 void CharStat::setStats(){
 
+}
+
+void CharStat::initStatPool(Strength str, Agility agi, Toughness tgh){
+    m_pool.setPool(str,agi,tgh);
 }
