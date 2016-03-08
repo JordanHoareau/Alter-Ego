@@ -7,7 +7,7 @@ void PlayState::init(){
     if(!m_texture.loadFromFile("img/PlayState.png"))
         cout << "PlayState - Image loading error" << endl;
 
-     m_context = new PlayContext();
+////     m_context = new PlayContext();
 
     m_sprite.setTexture(m_texture);
     cout << "PlayState - Init" << endl;

@@ -6,6 +6,7 @@
 #include "Agility.h"
 #include "Toughness.h"
 #include <unordered_map>
+#include <string>
 
 class StatsPool
 {

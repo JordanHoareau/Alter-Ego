@@ -13,7 +13,7 @@
 //    Initialization of the Game Engine
 //    @title : Title of the window
 //    Initialize the game engine, create the window
-void GameEngine::init(const string* title, int width, int height){
+void GameEngine::init(const sf::String title, int width, int height){
     m_window.create(sf::VideoMode(width, height), title);
     m_running = true;
 
