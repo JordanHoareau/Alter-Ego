@@ -1,4 +1,4 @@
-#include "GameCharacter/Strength.h"
+#include "Strength.h"
 
 /* ******************************************** */
 /*                   Strength                   */
@@ -25,28 +25,7 @@ Strength::~Strength()
 
 }
 
-int Strength::getHealth()
+int Strength::getValue()
 {
-    return 10*m_value;
-}
-int Strength::getSpellDamage()
-{
-    return 20*m_value;
-}
-int Strength::getWeaponDamage()
-{
-    return 20*m_value;
-}
-
-int Strength::getResistance()
-{
-    return 0;
-}
-int Strength::getCritChance()
-{
-    return 1*m_value;
-}
-int Strength::getSpeed()
-{
-    return 0;
+    return m_value;
 }

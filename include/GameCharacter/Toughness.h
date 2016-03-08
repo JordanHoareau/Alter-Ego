@@ -1,7 +1,7 @@
 #ifndef TOUGHNESS_H
 #define TOUGHNESS_H
 
-#include "GameCharacter/Stats.h"
+#include "Stats.h"
 /* ******************************************** */
 /*                   Toughness                  */
 /* Visible stat to player                       */
@@ -19,6 +19,7 @@ class Toughness: public Stats
         Toughness(int value);
         virtual ~Toughness();
 
+        virtual int getValue();
     protected:
 
     private:

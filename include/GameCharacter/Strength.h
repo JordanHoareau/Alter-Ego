@@ -1,7 +1,7 @@
 #ifndef STRENGTH_H
 #define STRENGTH_H
 
-#include "GameCharacter/Stats.h"
+#include "Stats.h"
 /* ******************************************** */
 /*                   Strength                   */
 /* Visible stat to player                       */
@@ -18,6 +18,8 @@ class Strength: public Stats
         Strength();
         Strength(int value);
         virtual ~Strength();
+
+        virtual int getValue();
 
     protected:
 

@@ -1,4 +1,4 @@
-#include "GameCharacter/Agility.h"
+#include "Agility.h"
 
 /* ******************************************** */
 /*                   Agility                    */
@@ -25,28 +25,7 @@ Agility::~Agility()
     //dtor
 }
 
-int Agility::getHealth()
+int Agility::getValue()
 {
-    return 0;
-}
-int Agility::getSpellDamage()
-{
-    return 20*m_value;
-}
-int Agility::getWeaponDamage()
-{
-    return 20*m_value;
-}
-
-int Agility::getResistance()
-{
-    return 0;
-}
-int Agility::getCritChance()
-{
-    return 1*m_value;
-}
-int Agility::getSpeed()
-{
-    return 10*m_value;
+    return m_value;
 }

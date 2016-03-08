@@ -1,4 +1,4 @@
-#include "GameCharacter/Toughness.h"
+#include "Toughness.h"
 
 /* ******************************************** */
 /*                   Toughness                  */
@@ -25,28 +25,7 @@ Toughness::~Toughness()
     //dtor
 }
 
-int Toughness::getHealth()
-{
-    return 20*m_value;
-}
-int Toughness::getSpellDamage()
-{
-    return 0;
-}
-int Toughness::getWeaponDamage()
-{
-    return 0;
-}
-
-int Toughness::getResistance()
+int Toughness::getValue()
 {
     return m_value;
-}
-int Toughness::getCritChance()
-{
-    return 0;
-}
-int Toughness::getSpeed()
-{
-    return 0;
 }
