@@ -6,21 +6,23 @@
 #include <iostream>
 using namespace std;
 
-#include "GameEngine/GameState.h"
+#include "Constants.h"
+class GameState;
 
 class GameEngine
 {
     public:
         void init(const char* title, int width=640, int height=480);
-//        void cleanup();
-//
-//        void changeState(GameState *state);
-//        void pushState(GameState *state);
-//        void popState();
+        void cleanup();
+
+        void changeState(GameState *state);
+        void changeState(int state);
+        void pushState(GameState *state);
+        void popState();
 
         void handleEvents();
-//        void update();
-//        void draw();
+        void update();
+        void draw();
 
         bool isRunning() { return m_running; }
         void quit() { m_running = false; }

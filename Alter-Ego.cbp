@@ -12,6 +12,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
@@ -29,6 +30,7 @@
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include" />
@@ -46,10 +48,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/Constants.h" />
 		<Unit filename="include/GameEngine/GameEngine.h" />
 		<Unit filename="include/GameEngine/GameState.h" />
+		<Unit filename="include/GameEngine/IntroState.h" />
+		<Unit filename="include/GameEngine/PlayState.h" />
 		<Unit filename="src/GameEngine/GameEngine.cpp" />
-		<Unit filename="src/GameEngine/GameState.cpp" />
+		<Unit filename="src/GameEngine/IntroState.cpp" />
+		<Unit filename="src/GameEngine/PlayState.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
