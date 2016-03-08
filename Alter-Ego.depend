@@ -420,6 +420,7 @@
 
 1457431754 c:\users\adrien\desktop\projets_c\alter-ego\include\constants.h
 
+<<<<<<< HEAD
 1457451700 source:c:\users\adrien\desktop\projets_c\alter-ego\src\gameengine\cinematicstate.cpp
 	"CinematicState.h"
 
@@ -430,4 +431,3 @@
 1457461108 c:\users\adrien\desktop\projets_c\alter-ego\include\gameengine\movestate.h
 	"Constants.h"
 	"PlayState.h"
-
