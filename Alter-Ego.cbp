@@ -48,13 +48,29 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/Character.h" />
 		<Unit filename="include/Constants.h" />
+		<Unit filename="include/GameCharacter/Agility.h" />
+		<Unit filename="include/GameCharacter/CharStat.h" />
+		<Unit filename="include/GameCharacter/CharStats.h" />
+		<Unit filename="include/GameCharacter/Character.h" />
+		<Unit filename="include/GameCharacter/Stats.h" />
+		<Unit filename="include/GameCharacter/Strength.h" />
+		<Unit filename="include/GameCharacter/Toughness.h" />
 		<Unit filename="include/GameEngine/CinematicState.h" />
 		<Unit filename="include/GameEngine/GameEngine.h" />
 		<Unit filename="include/GameEngine/GameState.h" />
 		<Unit filename="include/GameEngine/IntroState.h" />
 		<Unit filename="include/GameEngine/MoveState.h" />
 		<Unit filename="include/GameEngine/PlayState.h" />
+		<Unit filename="src/CharStats.cpp" />
+		<Unit filename="src/Character.cpp" />
+		<Unit filename="src/GameCharacter/Agility.cpp" />
+		<Unit filename="src/GameCharacter/CharStat.cpp" />
+		<Unit filename="src/GameCharacter/Character.cpp" />
+		<Unit filename="src/GameCharacter/Stats.cpp" />
+		<Unit filename="src/GameCharacter/Strength.cpp" />
+		<Unit filename="src/GameCharacter/Toughness.cpp" />
 		<Unit filename="src/GameEngine/CinematicState.cpp" />
 		<Unit filename="src/GameEngine/GameEngine.cpp" />
 		<Unit filename="src/GameEngine/IntroState.cpp" />
