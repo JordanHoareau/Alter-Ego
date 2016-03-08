@@ -1,6 +1,7 @@
 #ifndef AGILITY_H
 #define AGILITY_H
 
+#include "GameCharacter/Stats.h"
 /* ******************************************** */
 /*                   Agility                    */
 /* Visible stat to player                       */

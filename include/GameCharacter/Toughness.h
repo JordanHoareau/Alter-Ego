@@ -1,7 +1,7 @@
 #ifndef TOUGHNESS_H
 #define TOUGHNESS_H
 
-
+#include "GameCharacter/Stats.h"
 /* ******************************************** */
 /*                   Toughness                  */
 /* Visible stat to player                       */

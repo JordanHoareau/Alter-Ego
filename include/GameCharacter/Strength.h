@@ -1,6 +1,7 @@
 #ifndef STRENGTH_H
 #define STRENGTH_H
 
+#include "GameCharacter/Stats.h"
 /* ******************************************** */
 /*                   Strength                   */
 /* Visible stat to player                       */
