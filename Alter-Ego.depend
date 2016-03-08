@@ -418,14 +418,17 @@
 
 1457431754 c:\users\adrien\desktop\projets_c\alter-ego\include\constants.h
 
-1457393594 source:c:\users\jordan\documents\github\alter-ego\src\gameengine\gameengine.cpp
-	"GameEngine/GameEngine.h"
+1457460700 source:c:\users\jordan\documents\github\alter-ego\src\gameengine\gameengine.cpp
+	"GameEngine.h"
+	"GameState.h"
+	"IntroState.h"
+	"PlayState.h"
 
-1457393594 c:\users\jordan\documents\github\alter-ego\include\gameengine\gameengine.h
+1457460700 c:\users\jordan\documents\github\alter-ego\include\gameengine\gameengine.h
 	<SFML/Graphics.hpp>
 	<vector>
 	<iostream>
-	"GameEngine/GameState.h"
+	"Constants.h"
 
 1457393484 c:\users\jordan\documents\github\alter-ego\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -805,8 +808,29 @@
 	<string>
 	<vector>
 
-1457393594 c:\users\jordan\documents\github\alter-ego\include\gameengine\gamestate.h
+1457460700 c:\users\jordan\documents\github\alter-ego\include\gameengine\gamestate.h
+	"GameEngine.h"
 
 1457393594 source:c:\users\jordan\documents\github\alter-ego\src\gameengine\gamestate.cpp
 	"GameState.h"
+
+1457460700 c:\users\jordan\documents\github\alter-ego\include\constants.h
+
+1457460700 c:\users\jordan\documents\github\alter-ego\include\gameengine\introstate.h
+	"Constants.h"
+	"GameState.h"
+
+1457460700 c:\users\jordan\documents\github\alter-ego\include\gameengine\playstate.h
+	"Constants.h"
+	"GameState.h"
+
+1457460700 source:c:\users\jordan\documents\github\alter-ego\src\gameengine\introstate.cpp
+	"IntroState.h"
+
+1457460700 source:c:\users\jordan\documents\github\alter-ego\src\gameengine\playstate.cpp
+	"PlayState.h"
+
+1457460700 source:c:\users\jordan\documents\github\alter-ego\src\main.cpp
+	"GameEngine.h"
+	"Constants.h"
 
