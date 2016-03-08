@@ -16,7 +16,7 @@
 /*                                              */
 /* ******************************************** */
 
-class CharStat: public Stats
+class CharStat
 {
     public:
         CharStat();
@@ -27,6 +27,13 @@ class CharStat: public Stats
         virtual void setStats();
 
         void initStatPool(Strength str, Agility agi, Toughness tgh);
+        int getHealth(){return m_health;}
+        int getSpellDmg(){return m_spell_damage;}
+        int getWeaponDmg(){return m_weapon_damage;}
+        int getResist(){return m_resistance;}
+        int getCritChance(){return m_crit_chance;}
+        int getSpeed(){return m_speed;}
+       // void test();
 
     protected:
 

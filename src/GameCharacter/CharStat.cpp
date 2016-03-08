@@ -1,5 +1,6 @@
 #include "CharStat.h"
 
+#include <iostream>
 /* ******************************************** */
 /*                  CharStats                   */
 /* Gather visible values to player              */
@@ -60,3 +61,21 @@ void CharStat::setStats(){
 void CharStat::initStatPool(Strength str, Agility agi, Toughness tgh){
     m_pool.setPool(str,agi,tgh);
 }
+/*
+void CharStat::test(){
+    Strength* s = new Strength(1);
+    Agility* ag = new Agility(1);
+    Toughness* tg = new Toughness(1);
+    CharStat* cp = new CharStat(*s,*ag,*tg);
+    std::cout << cp;
+}
+
+std::ostream& operator<<(std::ostream &strm, const CharStat &cs) {
+  return strm <<    "-- Statistiques -- " << endl <<
+                    "Health : " << cs.getHealth() << endl <<
+                    "Spell Damage : " << cs.getSpellDmg()h() << endl <<
+                    "Weapon Damage : " << cs.getWeaponDmg() << endl <<
+                    "Resistance : " << cs.getResist() << endl <<
+                    "Crit Chance : " << cs.getCritChance() << endl <<
+                    "Speed : " << cs.getSpeed() << endl <<
+}*/
