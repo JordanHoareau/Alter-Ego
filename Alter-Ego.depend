@@ -1,9 +1,11 @@
 # depslib dependency file v1.0
-1457431824 source:c:\users\adrien\desktop\projets_c\alter-ego\src\gameengine\gameengine.cpp
+1457461086 source:c:\users\adrien\desktop\projets_c\alter-ego\src\gameengine\gameengine.cpp
 	"GameEngine.h"
 	"GameState.h"
 	"IntroState.h"
 	"PlayState.h"
+	"CinematicState.h"
+	"MoveState.h"
 
 1457431348 c:\users\adrien\desktop\projets_c\alter-ego\include\gameengine\gameengine.h
 	<SFML/Graphics.hpp>
@@ -395,7 +397,7 @@
 1457375269 source:c:\users\adrien\desktop\projets_c\alter-ego\src\gameengine\gamestate.cpp
 	"GameState.h"
 
-1457430406 source:c:\users\adrien\desktop\projets_c\alter-ego\src\main.cpp
+1457433803 source:c:\users\adrien\desktop\projets_c\alter-ego\src\main.cpp
 	"GameEngine.h"
 	"Constants.h"
 
@@ -417,4 +419,15 @@
 	"Constants.h"
 
 1457431754 c:\users\adrien\desktop\projets_c\alter-ego\include\constants.h
+
+1457451700 source:c:\users\adrien\desktop\projets_c\alter-ego\src\gameengine\cinematicstate.cpp
+	"CinematicState.h"
+
+1457451666 c:\users\adrien\desktop\projets_c\alter-ego\include\gameengine\cinematicstate.h
+	"Constants.h"
+	"GameState.h"
+
+1457461108 c:\users\adrien\desktop\projets_c\alter-ego\include\gameengine\movestate.h
+	"Constants.h"
+	"PlayState.h"
 

@@ -2,6 +2,14 @@
 #include "GameState.h"
 #include "IntroState.h"
 #include "PlayState.h"
+#include "CinematicState.h"
+#include "MoveState.h"
+#include "BattleState.h"
+#include "MenuState.h"
+#include "QuestState.h"
+#include "InventoryState.h"
+#include "SettingsState.h"
+
 
 void GameEngine::init(const char* title, int width, int height){
     m_window.create(sf::VideoMode(width, height), title);
