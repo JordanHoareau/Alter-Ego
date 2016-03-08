@@ -3,24 +3,24 @@
 IntroState IntroState::m_IntroState;
 
 void IntroState::init(){
+    cout << "   IntroState - Init" << endl;
 
     if(!m_texture.loadFromFile("img/IntroState.png"))
-        cout << "IntroState - Image loading error" << endl;
+        cout << "   IntroState - Image loading error" << endl;
 
     m_sprite.setTexture(m_texture);
-    cout << "IntroState - Init" << endl;
 }
 
 void IntroState::cleanup(){
-    cout << "IntroState - Cleanup" << endl;
+    cout << "   IntroState - Cleanup" << endl;
 }
 
 void IntroState::pause(){
-    cout << "IntroState - Pause" << endl;
+    cout << "   IntroState - Pause" << endl;
 }
 
 void IntroState::resume(){
-    cout << "IntroState - Resume" << endl;
+    cout << "   IntroState - Resume" << endl;
 }
 
 void IntroState::handleEvents(GameEngine *game){

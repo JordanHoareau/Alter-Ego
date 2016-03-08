@@ -25,9 +25,6 @@ class GameState
             state.print(flux) ;
             return flux;
         }
-    protected:
-        GameContext m_context;
-    private:
 };
 
 #endif // GAMESTATE_H

@@ -37,6 +37,7 @@ void GameEngine::cleanup(){
 //        @state The new state
 //        Clean up the old state and push the new one
 void GameEngine::changeState(GameState *state){
+    cout << endl << "GameEngine - changeState - " << *state << endl;
     // Delete the current state
     if(!states.empty()){
         states.back()->cleanup();
@@ -46,7 +47,6 @@ void GameEngine::changeState(GameState *state){
     // store and init the new state
     states.push_back(state);
     states.back()->init();
-    cout << "GameEngine - changeState - " << *state << endl;
 }
 
 //        Change the state using its constant index

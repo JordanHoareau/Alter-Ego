@@ -1,6 +1,8 @@
 #include "PlayContext.h"
 
-PlayContext::PlayContext()
-{
-    //ctor
+PlayContext PlayContext::m_PlayContext;
+
+void PlayContext::init(){
+    cout << "       PlayContext - Init" << endl;
 }
+

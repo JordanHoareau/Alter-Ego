@@ -29,6 +29,7 @@ class PlayState : public GameState {
         static PlayState m_PlayState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
+        PlayContext *m_context;
 };
 
 #endif // PLAYSTATE_H
