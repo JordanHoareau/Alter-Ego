@@ -7,6 +7,9 @@ void BattleState::init(){
     if(!m_texture.loadFromFile("img/BattleState.png"))
         cout << "BattleState - Image loading error" << endl;
 
+    m_context = BattleContext::instance();
+    m_context->init();
+
     m_sprite.setTexture(m_texture);
     cout << "BattleState - Init" << endl;
 }

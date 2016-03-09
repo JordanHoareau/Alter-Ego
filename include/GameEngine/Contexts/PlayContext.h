@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-class PlayContext : public GameContext{
+class PlayContext : public GameContext {
 
     public:
         void init();
@@ -16,6 +16,7 @@ class PlayContext : public GameContext{
     protected:
     private:
         static PlayContext m_PlayContext;
+        int m_value;
 };
 
 #endif // PLAYCONTEXT_H

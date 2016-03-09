@@ -1,10 +1,11 @@
-#ifndef CinematicState_H
-#define CinematicState_H
+#ifndef BattleState_H
+#define BattleState_H
 
 #include "GameStateConstant.h"
-#include "GameState.h"
+#include "PlayState.h"
+#include "BattleContext.h"
 
-class CinematicState : public GameState {
+class BattleState : public PlayState {
     public:
         void init();
         void cleanup();
@@ -17,17 +18,18 @@ class CinematicState : public GameState {
         void draw(GameEngine *game);
 
         void print(ostream &flux) const{
-            flux << "CinematicState";
+            flux << "BattleState";
         }
 
-        static CinematicState* instance() {
-            return &m_CinematicState;
+        static BattleState* instance() {
+            return &m_BattleState;
         }
 
     private:
-        static CinematicState m_CinematicState;
+        static BattleState m_BattleState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
+        BattleContext *m_context;
 };
 
-#endif // CinematicState_H
+#endif // BattleState_H

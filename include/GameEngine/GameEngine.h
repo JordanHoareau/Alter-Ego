@@ -5,7 +5,6 @@
 #include <vector>
 #include <iostream>
 using namespace std;
-#include <string>
 
 #include "GameStateConstant.h"
 class GameState;
