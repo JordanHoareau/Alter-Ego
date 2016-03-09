@@ -28,6 +28,7 @@ class QuestState : public MenuState {
         static QuestState m_QuestState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
+        QuestContext *m_context;
 };
 
 #endif // QuestState_H

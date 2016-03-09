@@ -28,6 +28,7 @@ class IntroState : public GameState {
         static IntroState m_IntroState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
+        IntroContext *m_context;
 };
 
 #endif // INTROSTATE_H

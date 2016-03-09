@@ -10,6 +10,9 @@ void PlayState::init(){
     m_context = PlayContext::instance();
     m_context->init();
 
+    m_context = PlayContext::instance();
+    m_context->init();
+
     m_sprite.setTexture(m_texture);
 }
 

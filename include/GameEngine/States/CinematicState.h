@@ -29,7 +29,7 @@ class CinematicState : public GameState {
         static CinematicState m_CinematicState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
-
+        CinematicContext *m_context;
 };
 
 #endif // CinematicState_H

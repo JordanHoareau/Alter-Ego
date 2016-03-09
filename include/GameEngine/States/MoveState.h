@@ -28,6 +28,7 @@ class MoveState : public PlayState {
         static MoveState m_MoveState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
+        MoveContext *m_context;
 };
 
 #endif // MoveState_H

@@ -28,6 +28,7 @@ class SettingsState : public MenuState {
         static SettingsState m_SettingsState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
+        SettingsContext *m_context;
 };
 
 #endif // SettingsState_H

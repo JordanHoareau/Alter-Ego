@@ -7,6 +7,9 @@ void CinematicState::init(){
     if(!m_texture.loadFromFile("img/CinematicState.png"))
         cout << "CinematicState - Image loading error" << endl;
 
+    m_context = CinematicContext::instance();
+    m_context->init();
+
     m_sprite.setTexture(m_texture);
     cout << "CinematicState - Init" << endl;
 }

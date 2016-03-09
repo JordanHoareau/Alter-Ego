@@ -8,6 +8,9 @@ void IntroState::init(){
     if(!m_texture.loadFromFile("img/IntroState.png"))
         cout << "   IntroState - Image loading error" << endl;
 
+    m_context = IntroContext::instance();
+    m_context->init();
+
     m_sprite.setTexture(m_texture);
 }
 

@@ -28,6 +28,7 @@ class MenuState : public PlayState {
         static MenuState m_MenuState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
+        MenuContext *m_context;
 };
 
 #endif // MenuState_H

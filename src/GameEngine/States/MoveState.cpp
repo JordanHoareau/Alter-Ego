@@ -7,6 +7,9 @@ void MoveState::init(){
     if(!m_texture.loadFromFile("img/MoveState.png"))
         cout << "MoveState - Image loading error" << endl;
 
+    m_context = MoveContext::instance();
+    m_context->init();
+
     m_sprite.setTexture(m_texture);
     cout << "MoveState - Init" << endl;
 }

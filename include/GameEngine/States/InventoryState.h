@@ -28,6 +28,7 @@ class InventoryState : public MenuState {
         static InventoryState m_InventoryState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
+        InventoryContext *m_context;
 };
 
 #endif // InventoryState_H

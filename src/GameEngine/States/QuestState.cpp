@@ -7,6 +7,9 @@ void QuestState::init(){
     if(!m_texture.loadFromFile("img/QuestState.png"))
         cout << "QuestState - Image loading error" << endl;
 
+    m_context = QuestContext::instance();
+    m_context->init();
+
     m_sprite.setTexture(m_texture);
     cout << "QuestState - Init" << endl;
 }
