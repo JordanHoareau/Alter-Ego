@@ -1,4 +1,4 @@
-#include "InventoryState.h"
+#include "GameEngine/States/InventoryState.h"
 
 InventoryState InventoryState::m_InventoryState;
 

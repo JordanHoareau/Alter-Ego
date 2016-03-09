@@ -1,9 +1,9 @@
 #ifndef InventoryState_H
 #define InventoryState_H
 
-#include "GameStateConstant.h"
-#include "MenuState.h"
-#include "InventoryContext.h"
+#include "Constants/GameStateConstant.h"
+#include "GameEngine/States/MenuState.h"
+#include "GameEngine/Contexts/InventoryContext.h"
 
 class InventoryState : public MenuState {
     public:

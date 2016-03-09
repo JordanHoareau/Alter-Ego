@@ -1,9 +1,9 @@
 #ifndef CinematicState_H
 #define CinematicState_H
 
-#include "GameStateConstant.h"
-#include "GameState.h"
-#include "CinematicContext.h"
+#include "Constants/GameStateConstant.h"
+#include "GameEngine/States/GameState.h"
+#include "GameEngine/Contexts/CinematicContext.h"
 
 class CinematicState : public GameState {
     public:

@@ -1,8 +1,8 @@
 #ifndef GAMESTATE_H
 #define GAMESTATE_H
 
-#include "GameEngine.h"
-#include "GameContext.h"
+#include "GameEngine/GameEngine.h"
+#include "GameEngine/Contexts/GameContext.h"
 
 class GameState
 {

@@ -1,9 +1,9 @@
 #ifndef INTROSTATE_H
 #define INTROSTATE_H
 
-#include "GameStateConstant.h"
-#include "GameState.h"
-#include "IntroContext.h"
+#include "Constants/GameStateConstant.h"
+#include "GameEngine/States/GameState.h"
+#include "GameEngine/Contexts/IntroContext.h"
 
 class IntroState : public GameState {
     public:

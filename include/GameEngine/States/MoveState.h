@@ -1,9 +1,9 @@
 #ifndef MoveState_H
 #define MoveState_H
 
-#include "GameStateConstant.h"
-#include "PlayState.h"
-#include "MoveContext.h"
+#include "Constants/GameStateConstant.h"
+#include "GameEngine/States/PlayState.h"
+#include "GameEngine/Contexts/MoveContext.h"
 
 class MoveState : public PlayState {
     public:

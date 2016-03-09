@@ -3,12 +3,12 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "Stats.h"
-#include "Strength.h"
-#include "Agility.h"
-#include "Toughness.h"
+#include "GameCharacter/CharacterStat/Stats.h"
+#include "GameCharacter/CharacterStat/Strength.h"
+#include "GameCharacter/CharacterStat/Agility.h"
+#include "GameCharacter/CharacterStat/Toughness.h"
 
-#include "StatConstant.h"
+#include "Constants/StatConstant.h"
 
 
 

@@ -1,4 +1,4 @@
-#include "CinematicContext.h"
+#include "GameEngine/Contexts/CinematicContext.h"
 
 CinematicContext CinematicContext::m_CinematicContext;
 

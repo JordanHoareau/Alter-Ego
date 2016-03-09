@@ -2,12 +2,12 @@
 #define CHARSTAT_H
 
 #include <iostream>
-#include "StatConstant.h"
-#include "Stats.h"
-#include "StatsPool.h"
-#include "Strength.h"
-#include "Agility.h"
-#include "Toughness.h"
+#include "Constants/StatConstant.h"
+#include "GameCharacter/CharacterStat/Stats.h"
+#include "GameCharacter/CharacterStat/StatsPool.h"
+#include "GameCharacter/CharacterStat/Strength.h"
+#include "GameCharacter/CharacterStat/Agility.h"
+#include "GameCharacter/CharacterStat/Toughness.h"
 /* ******************************************** */
 /*                  CharStats                   */
 /* Gather visible values to player              */

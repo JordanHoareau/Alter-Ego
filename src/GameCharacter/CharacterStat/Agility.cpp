@@ -1,4 +1,4 @@
-#include "Agility.h"
+#include "GameCharacter/CharacterStat/Agility.h"
 
 /* ******************************************** */
 /*                   Agility                    */

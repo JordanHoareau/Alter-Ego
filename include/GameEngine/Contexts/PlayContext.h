@@ -17,6 +17,7 @@ class PlayContext : public GameContext {
     private:
         static PlayContext m_PlayContext;
         int m_value;
+        int m_test;
 };
 
 #endif // PLAYCONTEXT_H
