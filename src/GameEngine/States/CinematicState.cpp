@@ -1,4 +1,4 @@
-#include "CinematicState.h"
+#include "GameEngine/States/CinematicState.h"
 
 CinematicState CinematicState::m_CinematicState;
 

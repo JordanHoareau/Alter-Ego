@@ -6,7 +6,7 @@
 #include <iostream>
 using namespace std;
 
-#include "GameStateConstant.h"
+#include "Constants/GameStateConstant.h"
 class GameState;
 
 class GameEngine

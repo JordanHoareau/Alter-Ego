@@ -1,4 +1,4 @@
-#include "StatsPool.h"
+#include "GameCharacter/CharacterStat/StatsPool.h"
 
 StatsPool::StatsPool(Strength& stg, Agility& agi, Toughness& tgh){
     m_pool[StatConstant::StrengthID] = stg.getValue();

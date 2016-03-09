@@ -1,4 +1,4 @@
-#include "MapBuffer.h"
+#include "World/MapBuffer.h"
 
 MapBuffer::MapBuffer()
 {

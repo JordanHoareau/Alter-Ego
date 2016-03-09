@@ -1,4 +1,4 @@
-#include "Stats.h"
+#include "GameCharacter/CharacterStat/Stats.h"
 
 /* ******************************************** */
 /*                     Stats                    */

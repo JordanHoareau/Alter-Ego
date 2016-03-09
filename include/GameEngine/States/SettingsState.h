@@ -1,9 +1,9 @@
 #ifndef SettingsState_H
 #define SettingsState_H
 
-#include "GameStateConstant.h"
-#include "MenuState.h"
-#include "SettingsContext.h"
+#include "Constants/GameStateConstant.h"
+#include "GameEngine/States/MenuState.h"
+#include "GameEngine/Contexts/SettingsContext.h"
 
 class SettingsState : public MenuState {
     public:

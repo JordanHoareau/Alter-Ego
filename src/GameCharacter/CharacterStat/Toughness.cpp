@@ -1,4 +1,4 @@
-#include "Toughness.h"
+#include "GameCharacter/CharacterStat/Toughness.h"
 
 /* ******************************************** */
 /*                   Toughness                  */

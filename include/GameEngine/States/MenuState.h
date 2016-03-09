@@ -1,9 +1,9 @@
 #ifndef MenuState_H
 #define MenuState_H
 
-#include "GameStateConstant.h"
-#include "PlayState.h"
-#include "MenuContext.h"
+#include "Constants/GameStateConstant.h"
+#include "GameEngine/States/PlayState.h"
+#include "GameEngine/Contexts/MenuContext.h"
 
 class MenuState : public PlayState {
     public:

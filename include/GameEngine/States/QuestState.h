@@ -1,9 +1,9 @@
 #ifndef QuestState_H
 #define QuestState_H
 
-#include "GameStateConstant.h"
-#include "MenuState.h"
-#include "QuestContext.h"
+#include "Constants/GameStateConstant.h"
+#include "GameEngine/States/MenuState.h"
+#include "GameEngine/Contexts/QuestContext.h"
 
 class QuestState : public MenuState {
     public:

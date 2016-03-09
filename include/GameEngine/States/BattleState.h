@@ -1,9 +1,9 @@
 #ifndef BattleState_H
 #define BattleState_H
 
-#include "GameStateConstant.h"
-#include "PlayState.h"
-#include "BattleContext.h"
+#include "Constants/GameStateConstant.h"
+#include "GameEngine/States/PlayState.h"
+#include "GameEngine/Contexts/BattleContext.h"
 
 class BattleState : public PlayState {
     public:
