@@ -18,7 +18,7 @@ class GameState
         virtual void draw(GameEngine *game) = 0;
 
         virtual void print(ostream &flux) const{
-            flux << "state";
+            flux << "GameState";
         }
 
         friend ostream &operator<<(ostream &flux, GameState const& state){
