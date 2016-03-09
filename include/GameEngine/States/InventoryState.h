@@ -3,6 +3,7 @@
 
 #include "GameStateConstant.h"
 #include "MenuState.h"
+#include "InventoryContext.h"
 
 class InventoryState : public MenuState {
     public:

@@ -3,6 +3,7 @@
 
 #include "GameStateConstant.h"
 #include "GameState.h"
+#include "IntroContext.h"
 
 class IntroState : public GameState {
     public:

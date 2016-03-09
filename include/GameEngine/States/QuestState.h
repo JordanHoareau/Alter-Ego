@@ -3,6 +3,7 @@
 
 #include "GameStateConstant.h"
 #include "MenuState.h"
+#include "QuestContext.h"
 
 class QuestState : public MenuState {
     public:
