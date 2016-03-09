@@ -1,7 +1,7 @@
 #ifndef BattleState_H
 #define BattleState_H
 
-#include "Constants.h"
+#include "GameStateConstant.h"
 #include "PlayState.h"
 
 class BattleState : public PlayState {

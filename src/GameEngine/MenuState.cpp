@@ -34,7 +34,7 @@ void MenuState::handleEvents(GameEngine *game){
                 break;
             case sf::Event::KeyPressed:
                 if(event.key.code == sf::Keyboard::Right)
-                    game->changeState(Constants::MenuState);
+                    game->changeState(GameStateConstant::MenuState);
                 break;
             default:
                 break;

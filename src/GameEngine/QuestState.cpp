@@ -34,7 +34,7 @@ void QuestState::handleEvents(GameEngine *game){
                 break;
             case sf::Event::KeyPressed:
                 if(event.key.code == sf::Keyboard::Right)
-                    game->changeState(Constants::QuestState);
+                    game->changeState(GameStateConstant::QuestState);
                 break;
             default:
                 break;

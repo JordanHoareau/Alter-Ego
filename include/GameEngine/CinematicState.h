@@ -1,7 +1,7 @@
 #ifndef CinematicState_H
 #define CinematicState_H
 
-#include "Constants.h"
+#include "GameStateConstant.h"
 #include "GameState.h"
 
 class CinematicState : public GameState {

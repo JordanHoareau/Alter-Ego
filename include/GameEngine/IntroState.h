@@ -1,7 +1,7 @@
 #ifndef INTROSTATE_H
 #define INTROSTATE_H
 
-#include "Constants.h"
+#include "GameStateConstant.h"
 #include "GameState.h"
 
 class IntroState : public GameState {

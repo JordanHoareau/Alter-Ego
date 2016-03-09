@@ -36,7 +36,7 @@ void PlayState::handleEvents(GameEngine *game){
             case sf::Event::KeyPressed:
                 switch(event.key.code){
                     case sf::Keyboard::Left:
-                        game->changeState(Constants::IntroState);
+                        game->changeState(GameStateConstant::IntroState);
                         break;
                     default:
                         break;

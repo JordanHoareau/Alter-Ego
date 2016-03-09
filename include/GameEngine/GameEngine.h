@@ -7,7 +7,7 @@
 using namespace std;
 #include <string>
 
-#include "Constants.h"
+#include "GameStateConstant.h"
 class GameState;
 
 class GameEngine

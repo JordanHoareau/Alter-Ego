@@ -1,7 +1,7 @@
 #ifndef SettingsState_H
 #define SettingsState_H
 
-#include "Constants.h"
+#include "GameStateConstant.h"
 #include "MenuState.h"
 
 class SettingsState : public MenuState {

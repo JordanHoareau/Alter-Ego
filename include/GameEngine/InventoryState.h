@@ -1,7 +1,7 @@
 #ifndef InventoryState_H
 #define InventoryState_H
 
-#include "Constants.h"
+#include "GameStateConstant.h"
 #include "MenuState.h"
 
 class InventoryState : public MenuState {

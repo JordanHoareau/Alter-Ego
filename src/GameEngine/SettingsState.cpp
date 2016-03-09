@@ -34,7 +34,7 @@ void SettingsState::handleEvents(GameEngine *game){
                 break;
             case sf::Event::KeyPressed:
                 if(event.key.code == sf::Keyboard::Right)
-                    game->changeState(Constants::SettingsState);
+                    game->changeState(GameStateConstant::SettingsState);
                 break;
             default:
                 break;

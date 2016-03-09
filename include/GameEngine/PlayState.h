@@ -1,7 +1,7 @@
 #ifndef PLAYSTATE_H
 #define PLAYSTATE_H
 
-#include "Constants.h"
+#include "GameStateConstant.h"
 #include "GameState.h"
 #include "PlayContext.h"
 

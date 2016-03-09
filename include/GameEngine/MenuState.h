@@ -1,7 +1,7 @@
 #ifndef MenuState_H
 #define MenuState_H
 
-#include "Constants.h"
+#include "GameStateConstant.h"
 #include "PlayState.h"
 
 class MenuState : public PlayState {

@@ -1,7 +1,7 @@
 #ifndef QuestState_H
 #define QuestState_H
 
-#include "Constants.h"
+#include "GameStateConstant.h"
 #include "MenuState.h"
 
 class QuestState : public MenuState {

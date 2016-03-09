@@ -34,7 +34,7 @@ void InventoryState::handleEvents(GameEngine *game){
                 break;
             case sf::Event::KeyPressed:
                 if(event.key.code == sf::Keyboard::Right)
-                    game->changeState(Constants::InventoryState);
+                    game->changeState(GameStateConstant::InventoryState);
                 break;
             default:
                 break;
