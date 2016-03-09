@@ -1,4 +1,4 @@
-#include "WeaponAttack.h"
+#include "GameCharacter/CharacterAttack/WeaponAttack.h"
 
 WeaponAttack::WeaponAttack()
 {

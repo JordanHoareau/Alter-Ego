@@ -1,4 +1,4 @@
-#include "ClassAttack.h"
+#include "GameCharacter/CharacterAttack/ClassAttack.h"
 
 ClassAttack::ClassAttack()
 {
@@ -7,5 +7,4 @@ ClassAttack::ClassAttack()
 
 ClassAttack::~ClassAttack()
 {
-    //dtor
 }

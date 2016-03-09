@@ -17,6 +17,7 @@ Strength::Strength()
 
 Strength::~Strength()
 {
+    delete this;
 }
 
 Strength::Strength(int value)

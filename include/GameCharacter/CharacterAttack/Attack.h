@@ -15,6 +15,7 @@ class Attack
         unsigned int m_baseheal;
         unsigned int m_range[2];
         bool isLine;
+        sf::String m_description;
 };
 
 #endif // ATTACK_H

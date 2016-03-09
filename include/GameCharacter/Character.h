@@ -1,7 +1,7 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
 
-#include "CharStat.h"
+#include "GameCharacter/CharacterStat/CharStat.h"
 
 class Character
 {

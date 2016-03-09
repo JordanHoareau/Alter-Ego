@@ -13,6 +13,7 @@ class ClassAttack : public Attack
     protected:
 
     private:
+        sf::String m_class;
 };
 
 #endif // CLASSATTACK_H

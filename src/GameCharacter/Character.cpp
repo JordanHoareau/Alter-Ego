@@ -1,4 +1,4 @@
-#include "Character.h"
+#include "GameCharacter/Character.h"
 
 Character::Character()
 {

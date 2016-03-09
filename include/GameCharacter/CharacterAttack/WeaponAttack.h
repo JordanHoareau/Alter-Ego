@@ -1,7 +1,6 @@
 #ifndef WEAPONATTACK_H
 #define WEAPONATTACK_H
 
-#include <SFML/Graphics.hpp>
 #include "Attack.h"
 
 class WeaponAttack: public Attack
