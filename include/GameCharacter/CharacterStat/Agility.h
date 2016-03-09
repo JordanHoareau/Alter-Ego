@@ -17,8 +17,8 @@ class Agility: public Stats
 {
     public:
         Agility();
-        Agility(int value);
         virtual ~Agility();
+        Agility(int value);
 
         virtual int getValue();
         virtual void setValue(int value);

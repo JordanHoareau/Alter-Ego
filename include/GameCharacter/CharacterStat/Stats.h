@@ -13,6 +13,7 @@
 class Stats
 {
     public:
+
         virtual ~Stats(){}
 
         virtual int getValue() = 0;

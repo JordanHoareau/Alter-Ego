@@ -9,15 +9,16 @@
 /* Children classes : none                      */
 /*                                              */
 /* ******************************************** */
+
 CharStat::CharStat()
 {
-    m_health = 0;
-    m_spell_damage = 0;
-    m_weapon_damage = 0;
-    m_resistance = 0;
-    m_crit_chance = 0;
-    m_speed = 0;
 }
+CharStat::~CharStat()
+{
+    m_pool.Free();
+    delete this;
+}
+
 
 CharStat::CharStat(Strength& str, Agility& agi, Toughness& tgh)
 {
@@ -46,11 +47,6 @@ CharStat::CharStat(Strength& str, Agility& agi, Toughness& tgh)
                  +  agi.getValue()*StatConstant::AgilitySpeedRatio;
 
     m_pool.initPool(str, agi, tgh);
-}
-
-CharStat::~CharStat()
-{
-
 }
 
 void CharStat::updateStats(Strength& str, Agility& agi, Toughness& tgh){

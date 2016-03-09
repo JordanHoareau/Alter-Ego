@@ -16,6 +16,7 @@ class StatsPool
 {
     public:
         StatsPool(){}
+        virtual ~StatsPool(){delete this;}
         StatsPool(Strength& stg,
                   Agility& agi,
                   Toughness& tgh);
@@ -31,6 +32,7 @@ class StatsPool
         Agility getAgility(){return m_pool[StatConstant::AgilityID];}
         Toughness getToughness(){return m_pool[StatConstant::ToughnessID];}
         void test();
+        void Free();
 
         int* getPool(){return m_pool;}
 

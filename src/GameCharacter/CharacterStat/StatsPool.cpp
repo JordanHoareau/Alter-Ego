@@ -18,6 +18,10 @@ void StatsPool::updatePool(Strength& str, Agility& agi, Toughness& tgh){
     m_pool[StatConstant::ToughnessID] += tgh.getValue();
 }
 
+void StatsPool::Free(){
+    delete this;
+}
+
 
 
 

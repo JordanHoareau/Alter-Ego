@@ -15,14 +15,13 @@ Toughness::Toughness()
     m_value = 0;
 }
 
+Toughness::~Toughness()
+{
+    delete this;
+}
 Toughness::Toughness(int value)
 {
     m_value = value;
-}
-
-Toughness::~Toughness()
-{
-    //dtor
 }
 
 int Toughness::getValue()

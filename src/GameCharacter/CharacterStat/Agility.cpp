@@ -15,16 +15,15 @@ Agility::Agility()
     m_value = 0;
 }
 
+Agility::~Agility()
+{
+    delete this;
+}
+
 Agility::Agility(int value)
 {
     m_value = value;
 }
-
-Agility::~Agility()
-{
-    //dtor
-}
-
 int Agility::getValue()
 {
     return m_value;

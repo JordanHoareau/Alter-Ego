@@ -15,16 +15,14 @@ Strength::Strength()
     m_value = 0;
 }
 
+Strength::~Strength()
+{
+}
+
 Strength::Strength(int value)
 {
     m_value = value;
 }
-
-Strength::~Strength()
-{
-
-}
-
 int Strength::getValue()
 {
     return m_value;

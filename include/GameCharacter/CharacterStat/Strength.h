@@ -16,8 +16,8 @@ class Strength: public Stats
 {
     public:
         Strength();
-        Strength(int value);
         virtual ~Strength();
+        Strength(int value);
 
         virtual int getValue();
         virtual void setValue(int value);
