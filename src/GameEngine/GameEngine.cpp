@@ -50,35 +50,35 @@ void GameEngine::changeState(GameState *state){
 }
 
 //        Change the state using its constant index
-//        @state The index of the state (cf Constants.h)
+//        @state The index of the state (cf GameStateConstant.h)
 //        Call the other ChangeState method with a State object
 void GameEngine::changeState(int state){
     switch(state){
-        case Constants::IntroState:
+        case GameStateConstant::IntroState:
             changeState(IntroState::instance());
             break;
-        case Constants::PlayState:
+        case GameStateConstant::PlayState:
             changeState(PlayState::instance());
             break;
-        case Constants::CinematicState:
+        case GameStateConstant::CinematicState:
             changeState(CinematicState::instance());
             break;
-        case Constants::MoveState:
+        case GameStateConstant::MoveState:
             changeState(MoveState::instance());
             break;
-        case Constants::BattleState:
+        case GameStateConstant::BattleState:
             changeState(BattleState::instance());
             break;
-        case Constants::MenuState:
+        case GameStateConstant::MenuState:
             changeState(MenuState::instance());
             break;
-        case Constants::InventoryState:
+        case GameStateConstant::InventoryState:
             changeState(InventoryState::instance());
             break;
-        case Constants::QuestState:
+        case GameStateConstant::QuestState:
             changeState(QuestState::instance());
             break;
-        case Constants::SettingsState:
+        case GameStateConstant::SettingsState:
             changeState(SettingsState::instance());
             break;
         default:

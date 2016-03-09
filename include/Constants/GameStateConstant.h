@@ -1,7 +1,7 @@
 #ifndef GAMESTATECONSTANT_H
 #define GAMESTATECONSTANT_H
 
-namespace GAMESTATECONSTANTs{
+namespace GameStateConstant {
     const int IntroState(1);
     const int CinematicState(2);
     const int PlayState(3);
