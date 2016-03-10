@@ -1,6 +1,5 @@
 #include "World/Building.h"
 
-Building::Building()
-{
+Building::Building(int id) : SubMap(id){
     //ctor
 }

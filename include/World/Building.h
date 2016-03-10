@@ -7,7 +7,7 @@
 class Building : public SubMap
 {
     public:
-        Building();
+        Building(int id);
     protected:
     private:
 };

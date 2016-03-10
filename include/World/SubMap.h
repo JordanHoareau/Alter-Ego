@@ -3,10 +3,9 @@
 
 #include "Map.h"
 
-class SubMap : public Map
-{
+class SubMap : public Map {
     public:
-        SubMap();
+        SubMap(int id);
     protected:
     private:
 };

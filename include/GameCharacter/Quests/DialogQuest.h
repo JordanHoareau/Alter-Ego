@@ -1,15 +1,15 @@
 #ifndef DIALOGQUEST_H
 #define DIALOGQUEST_H
 
-#include "GameCharacter/Quests/Quest.h"
+#include "Quest.h"
+#include "GameCharacter/Character.h"
 
-
-class DialogQuest : public Quest
-{
+class DialogQuest : public Quest {
     public:
-        DialogQuest();
+        DialogQuest(int id, int state);
     protected:
     private:
+        int m_targetID;
 };
 
 #endif // DIALOGQUEST_H

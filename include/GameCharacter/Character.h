@@ -3,7 +3,7 @@
 
 #include "GameCharacter/Stats/CharStat.h"
 
-enum Gender {girl, boy };
+enum Gender {girl, boy};
 
 class Character
 {

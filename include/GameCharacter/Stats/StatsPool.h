@@ -16,7 +16,7 @@ class StatsPool
 {
     public:
         StatsPool(){}
-        virtual ~StatsPool(){delete this;}
+        virtual ~StatsPool(){}
         StatsPool(Strength& stg,
                   Agility& agi,
                   Toughness& tgh);

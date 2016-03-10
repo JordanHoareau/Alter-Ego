@@ -2,6 +2,9 @@
 #define PLAYCONTEXT_H
 
 #include "GameContext.h"
+#include "GameCharacter/Character.h"
+#include "World/Map.h"
+#include <vector>
 #include <iostream>
 using namespace std;
 
@@ -16,8 +19,8 @@ class PlayContext : public GameContext {
     protected:
     private:
         static PlayContext m_PlayContext;
-        int m_value;
-        int m_test;
+        Character m_player;
+        vector<Map> m_maps;
 };
 
 #endif // PLAYCONTEXT_H

@@ -1,6 +1,5 @@
 #include "World/Dungeon.h"
 
-Dungeon::Dungeon()
-{
+Dungeon::Dungeon(int id) : SubMap(id) {
     //ctor
 }

@@ -11,7 +11,7 @@ class MapBuffer
         MapBuffer();
     protected:
     private:
-        vector<Map> myMaps;
+        vector<Map> m_maps;
 };
 
 #endif // MAPBUFFER_H

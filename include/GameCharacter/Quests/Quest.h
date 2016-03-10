@@ -8,13 +8,10 @@ using namespace std;
 
 enum State { hide, show, current, finish };
 
-class Quest
-{
+class Quest {
     public:
-        Quest();
-        Quest(int id, sf::String name, int exp, int gold, vector<Item*> items, int state);
+        Quest(int id, int state);
     protected:
-    private:
         int m_id;
         sf::String m_name;
         int m_exp;

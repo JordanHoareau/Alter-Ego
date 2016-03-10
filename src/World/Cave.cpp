@@ -1,6 +1,5 @@
 #include "World/Cave.h"
 
-Cave::Cave()
-{
+Cave::Cave(int id) : SubMap(id) {
     //ctor
 }

@@ -7,7 +7,7 @@
 class Dungeon : public SubMap
 {
     public:
-        Dungeon();
+        Dungeon(int id);
     protected:
     private:
 };

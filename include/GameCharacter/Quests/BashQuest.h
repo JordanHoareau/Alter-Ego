@@ -1,15 +1,16 @@
 #ifndef BASHQUEST_H
 #define BASHQUEST_H
 
-#include "GameCharacter/Quests/Quest.h"
+#include "Quest.h"
 
-
-class BashQuest : public Quest
-{
+//template <typename T>
+class BashQuest : public Quest {
     public:
-        BashQuest();
+        BashQuest(int id, int state=0) : Quest(id, state){
+            m_current = 0;
+//            m_objective = JSON.getObjectiveFromId(m_id);
+        }
     protected:
-    private:
         int m_objective;
         int m_current;
 };

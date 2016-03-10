@@ -7,7 +7,7 @@
 class Cave : public SubMap
 {
     public:
-        Cave();
+        Cave(int id);
     protected:
     private:
 };
