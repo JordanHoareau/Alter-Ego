@@ -16,9 +16,6 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
-					<Add directory="include/GameEngine" />
-					<Add directory="include/GameCharacter" />
-					<Add directory="include/GameEngine/Contexts" />
 				</Compiler>
 				<Linker>
 					<Add library="lib\libsfml-graphics-d.a" />
@@ -36,9 +33,6 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include" />
-					<Add directory="include/GameEngine" />
-					<Add directory="include/GameCharacter" />
-					<Add directory="include/GameEngine/Contexts" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -53,17 +47,9 @@
 			<Add option="-std=c++11" />
 			<Add option="-Wall" />
 			<Add directory="include" />
-			<Add directory="include/Constants" />
-			<Add directory="include/GameCharacter" />
-			<Add directory="include/GameEngine" />
-			<Add directory="include/GameEngine/States" />
-			<Add directory="include/GameEngine/Contexts" />
 		</Compiler>
 		<Unit filename="include/Constants/GameStateConstant.h" />
 		<Unit filename="include/Constants/StatConstant.h" />
-		<Unit filename="include/GameCharacter/Agility.h" />
-		<Unit filename="include/GameCharacter/CharStat.h" />
-		<Unit filename="include/GameCharacter/Character.h" />
 		<Unit filename="include/GameCharacter/CharacterStat/Agility.h" />
 		<Unit filename="include/GameCharacter/CharacterStat/CharStat.h" />
 		<Unit filename="include/GameCharacter/CharacterStat/Character.h" />
@@ -71,10 +57,6 @@
 		<Unit filename="include/GameCharacter/CharacterStat/StatsPool.h" />
 		<Unit filename="include/GameCharacter/CharacterStat/Strength.h" />
 		<Unit filename="include/GameCharacter/CharacterStat/Toughness.h" />
-		<Unit filename="include/GameCharacter/Stats.h" />
-		<Unit filename="include/GameCharacter/StatsPool.h" />
-		<Unit filename="include/GameCharacter/Strength.h" />
-		<Unit filename="include/GameCharacter/Toughness.h" />
 		<Unit filename="include/GameEngine/Contexts/BattleContext.h" />
 		<Unit filename="include/GameEngine/Contexts/CinematicContext.h" />
 		<Unit filename="include/GameEngine/Contexts/GameContext.h" />
@@ -96,14 +78,12 @@
 		<Unit filename="include/GameEngine/States/PlayState.h" />
 		<Unit filename="include/GameEngine/States/QuestState.h" />
 		<Unit filename="include/GameEngine/States/SettingsState.h" />
-		<Unit filename="include/SFML/Audio/SoundFileFactory.inl" />
-		<Unit filename="include/SFML/Graphics/Rect.inl" />
-		<Unit filename="include/SFML/System/String.inl" />
-		<Unit filename="include/SFML/System/Thread.inl" />
-		<Unit filename="include/SFML/System/ThreadLocalPtr.inl" />
-		<Unit filename="include/SFML/System/Utf.inl" />
-		<Unit filename="include/SFML/System/Vector2.inl" />
-		<Unit filename="include/SFML/System/Vector3.inl" />
+		<Unit filename="include/World/Building.h" />
+		<Unit filename="include/World/Cave.h" />
+		<Unit filename="include/World/Dungeon.h" />
+		<Unit filename="include/World/Map.h" />
+		<Unit filename="include/World/MapBuffer.h" />
+		<Unit filename="include/World/SubMap.h" />
 		<Unit filename="src/GameCharacter/CharacterStat/Agility.cpp" />
 		<Unit filename="src/GameCharacter/CharacterStat/CharStat.cpp" />
 		<Unit filename="src/GameCharacter/CharacterStat/Stats.cpp" />
@@ -129,6 +109,12 @@
 		<Unit filename="src/GameEngine/States/PlayState.cpp" />
 		<Unit filename="src/GameEngine/States/QuestState.cpp" />
 		<Unit filename="src/GameEngine/States/SettingsState.cpp" />
+		<Unit filename="src/World/Building.cpp" />
+		<Unit filename="src/World/Cave.cpp" />
+		<Unit filename="src/World/Dungeon.cpp" />
+		<Unit filename="src/World/Map.cpp" />
+		<Unit filename="src/World/MapBuffer.cpp" />
+		<Unit filename="src/World/SubMap.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />

@@ -3,11 +3,11 @@
 
 #include <iostream>
 #include "Constants/StatConstant.h"
-#include "GameCharacter/CharacterStat/Stats.h"
-#include "GameCharacter/CharacterStat/StatsPool.h"
-#include "GameCharacter/CharacterStat/Strength.h"
-#include "GameCharacter/CharacterStat/Agility.h"
-#include "GameCharacter/CharacterStat/Toughness.h"
+#include "GameCharacter/Stats/Stats.h"
+#include "GameCharacter/Stats/StatsPool.h"
+#include "GameCharacter/Stats/Strength.h"
+#include "GameCharacter/Stats/Agility.h"
+#include "GameCharacter/Stats/Toughness.h"
 /* ******************************************** */
 /*                  CharStats                   */
 /* Gather visible values to player              */

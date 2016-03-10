@@ -1,4 +1,4 @@
-#include "GameCharacter/CharacterStat/CharStat.h"
+#include "GameCharacter/Stats/CharStat.h"
 
 #include <iostream>
 /* ******************************************** */

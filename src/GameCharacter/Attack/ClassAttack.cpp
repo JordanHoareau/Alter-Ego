@@ -1,4 +1,4 @@
-#include "GameCharacter/CharacterAttack/ClassAttack.h"
+#include "GameCharacter/Attack/ClassAttack.h"
 
 ClassAttack::ClassAttack()
 {

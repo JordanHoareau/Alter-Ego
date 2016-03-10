@@ -1,35 +1,35 @@
-#include "GameCharacter/CharacterStat/Strength.h"
+#include "GameCharacter/Stats/Toughness.h"
 
 /* ******************************************** */
-/*                   Strength                   */
+/*                   Toughness                  */
 /* Visible stat to player                       */
-/* Improve damages, health and crit_chance      */
+/* Improve health and resistance                */
 /*                                              */
 /* Parent class : Stats                         */
 /* Children classes : none                      */
 /*                                              */
 /* ******************************************** */
 
-Strength::Strength()
+Toughness::Toughness()
 {
     m_value = 0;
 }
 
-Strength::~Strength()
+Toughness::~Toughness()
 {
     delete this;
 }
-
-Strength::Strength(int value)
+Toughness::Toughness(int value)
 {
     m_value = value;
 }
-int Strength::getValue()
+
+int Toughness::getValue()
 {
     return m_value;
 }
 
-void Strength::setValue(int value)
+void Toughness::setValue(int value)
 {
     m_value = value;
 }

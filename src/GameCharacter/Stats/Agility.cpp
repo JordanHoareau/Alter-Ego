@@ -1,35 +1,35 @@
-#include "GameCharacter/CharacterStat/Toughness.h"
+#include "GameCharacter/Stats/Agility.h"
 
 /* ******************************************** */
-/*                   Toughness                  */
+/*                   Agility                    */
 /* Visible stat to player                       */
-/* Improve health and resistance                */
+/* Improve damages, speed and crit_chance       */
 /*                                              */
 /* Parent class : Stats                         */
 /* Children classes : none                      */
 /*                                              */
 /* ******************************************** */
 
-Toughness::Toughness()
+Agility::Agility()
 {
     m_value = 0;
 }
 
-Toughness::~Toughness()
+Agility::~Agility()
 {
     delete this;
 }
-Toughness::Toughness(int value)
+
+Agility::Agility(int value)
 {
     m_value = value;
 }
-
-int Toughness::getValue()
+int Agility::getValue()
 {
     return m_value;
 }
 
-void Toughness::setValue(int value)
+void Agility::setValue(int value)
 {
     m_value = value;
 }
