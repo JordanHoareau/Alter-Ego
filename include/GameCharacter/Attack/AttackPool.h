@@ -1,13 +1,15 @@
 #ifndef ATTACKPOOL_H
 #define ATTACKPOOL_H
 
-#include "Attack.h"
+#include "GameCharacter/Attack/Attack.h"
+#include "GameCharacter/Attack/ClassAttack.h"
+#include "GameCharacter/Attack/WeaponAttack.h"
 
 
 class AttackPool : public Attack
 {
     public:
-        AttackPool();
+        AttackPool(){}
         virtual ~AttackPool();
 
     protected:
