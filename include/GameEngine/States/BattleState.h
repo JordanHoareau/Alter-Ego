@@ -2,8 +2,7 @@
 #define BattleState_H
 
 #include "Constants/GameStateConstant.h"
-#include "GameEngine/States/PlayState.h"
-#include "GameEngine/Contexts/BattleContext.h"
+#include "PlayState.h"
 
 class BattleState : public PlayState {
     public:
@@ -29,7 +28,6 @@ class BattleState : public PlayState {
         static BattleState m_BattleState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
-        BattleContext *m_context;
 };
 
 #endif // BattleState_H

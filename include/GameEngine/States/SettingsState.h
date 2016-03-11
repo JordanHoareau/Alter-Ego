@@ -2,8 +2,7 @@
 #define SettingsState_H
 
 #include "Constants/GameStateConstant.h"
-#include "GameEngine/States/MenuState.h"
-#include "GameEngine/Contexts/SettingsContext.h"
+#include "MenuState.h"
 
 class SettingsState : public MenuState {
     public:
@@ -29,7 +28,6 @@ class SettingsState : public MenuState {
         static SettingsState m_SettingsState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
-        SettingsContext *m_context;
 };
 
 #endif // SettingsState_H

@@ -3,9 +3,8 @@
 //        Quest constructor
 //        @id     Id quest ID from the data
 //        @state  State of the quest, int [0-3], stored in database
-Quest::Quest (int id, int state=0){
+Quest::Quest (int id){
     m_id = id;
-    m_state = static_cast<State>(state);
 
 //    m_attr = JSON.getQuestFromId(m_id);
 }

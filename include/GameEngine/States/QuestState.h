@@ -2,8 +2,7 @@
 #define QuestState_H
 
 #include "Constants/GameStateConstant.h"
-#include "GameEngine/States/MenuState.h"
-#include "GameEngine/Contexts/QuestContext.h"
+#include "MenuState.h"
 
 class QuestState : public MenuState {
     public:
@@ -29,7 +28,6 @@ class QuestState : public MenuState {
         static QuestState m_QuestState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
-        QuestContext *m_context;
 };
 
 #endif // QuestState_H

@@ -6,11 +6,11 @@
 class Item
 {
     public:
-        Item();
+        Item(int id);
     protected:
-    private:
         int m_id;
         sf::String m_name;
+        sf::String m_description;
         int m_quantity;
 };
 

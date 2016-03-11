@@ -7,9 +7,6 @@ void MenuState::init(){
     if(!m_texture.loadFromFile("img/MenuState.png"))
         cout << "MenuState - Image loading error" << endl;
 
-    m_context = MenuContext::instance();
-    m_context->init();
-
     m_sprite.setTexture(m_texture);
     cout << "MenuState - Init" << endl;
 }

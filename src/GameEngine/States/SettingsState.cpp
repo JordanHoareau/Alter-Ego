@@ -7,9 +7,6 @@ void SettingsState::init(){
     if(!m_texture.loadFromFile("img/SettingsState.png"))
         cout << "SettingsState - Image loading error" << endl;
 
-    m_context = SettingsContext::instance();
-    m_context->init();
-
     m_sprite.setTexture(m_texture);
     cout << "SettingsState - Init" << endl;
 }

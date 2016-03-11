@@ -1,4 +1,4 @@
-#include "GameCharacter/Attack/ClassAttack.h"
+#include "GameCharacter/Attacks/ClassAttack.h"
 
 ClassAttack::ClassAttack(sf::String attackname)
 {       std::cout << "yo";

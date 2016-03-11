@@ -7,9 +7,6 @@ void CinematicState::init(){
     if(!m_texture.loadFromFile("img/CinematicState.png"))
         cout << "CinematicState - Image loading error" << endl;
 
-    m_context = CinematicContext::instance();
-    m_context->init();
-
     m_sprite.setTexture(m_texture);
     cout << "CinematicState - Init" << endl;
 }
@@ -37,7 +34,7 @@ void CinematicState::handleEvents(GameEngine *game){
                 break;
             case sf::Event::KeyPressed:
                 if(event.key.code == sf::Keyboard::Right)
-                    game->changeState(GameStateConstant::PlayState);
+                    game->changeState(GameStateConstant::CinematicState);
                 break;
             default:
                 break;

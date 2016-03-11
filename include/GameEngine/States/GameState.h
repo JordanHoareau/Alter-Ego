@@ -2,7 +2,6 @@
 #define GAMESTATE_H
 
 #include "GameEngine/GameEngine.h"
-#include "GameEngine/Contexts/GameContext.h"
 
 class GameState
 {

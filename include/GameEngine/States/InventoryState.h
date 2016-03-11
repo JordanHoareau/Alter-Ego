@@ -2,8 +2,7 @@
 #define InventoryState_H
 
 #include "Constants/GameStateConstant.h"
-#include "GameEngine/States/MenuState.h"
-#include "GameEngine/Contexts/InventoryContext.h"
+#include "MenuState.h"
 
 class InventoryState : public MenuState {
     public:
@@ -29,7 +28,6 @@ class InventoryState : public MenuState {
         static InventoryState m_InventoryState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
-        InventoryContext *m_context;
 };
 
 #endif // InventoryState_H

@@ -2,8 +2,7 @@
 #define INTROSTATE_H
 
 #include "Constants/GameStateConstant.h"
-#include "GameEngine/States/GameState.h"
-#include "GameEngine/Contexts/IntroContext.h"
+#include "GameState.h"
 
 class IntroState : public GameState {
     public:
@@ -29,7 +28,6 @@ class IntroState : public GameState {
         static IntroState m_IntroState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
-        IntroContext *m_context;
 };
 
 #endif // INTROSTATE_H

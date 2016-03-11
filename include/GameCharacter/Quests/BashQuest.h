@@ -3,7 +3,9 @@
 
 #include "Quest.h"
 
-//template <typename T>
+//              NOT WORKING CLASS ATM (DO NOT INCLUDE IT)
+
+template <typename T>
 class BashQuest : public Quest {
     public:
         BashQuest(int id, int state=0) : Quest(id, state){
@@ -11,7 +13,7 @@ class BashQuest : public Quest {
 //            m_objective = JSON.getObjectiveFromId(m_id);
         }
     protected:
-        int m_objective;
+        T m_objective;
         int m_current;
 };
 

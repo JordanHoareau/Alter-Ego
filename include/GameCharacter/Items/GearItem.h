@@ -1,14 +1,16 @@
 #ifndef GEARITEM_H
 #define GEARITEM_H
 
-#include "GameCharacter/Items/PricedItem.h"
+#include "Item.h"
+#include "Constants/StatsConstant.h"
+#include "Constants/ItemConstant.h"
 
-class GearItem : public PricedItem
-{
+class GearItem : public Item {
     public:
+        GearItem(int id);
     protected:
-    private:
         int m_category;
+        int m_bonus[StatsConstant::CaracsNumber];
 };
 
 #endif // GEARITEM_H

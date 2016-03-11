@@ -10,7 +10,11 @@ enum State { hide, show, current, finish };
 
 class Quest {
     public:
-        Quest(int id, int state);
+        Quest(int id);
+
+        bool isFinished(int id){
+            return m_state == finish;
+        }
     protected:
         int m_id;
         sf::String m_name;

@@ -2,8 +2,7 @@
 #define MenuState_H
 
 #include "Constants/GameStateConstant.h"
-#include "GameEngine/States/PlayState.h"
-#include "GameEngine/Contexts/MenuContext.h"
+#include "PlayState.h"
 
 class MenuState : public PlayState {
     public:
@@ -29,7 +28,6 @@ class MenuState : public PlayState {
         static MenuState m_MenuState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
-        MenuContext *m_context;
 };
 
 #endif // MenuState_H

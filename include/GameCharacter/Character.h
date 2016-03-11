@@ -1,22 +1,35 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
 
-#include "GameCharacter/Stats/CharStat.h"
+#include <SFML/Graphics.hpp>
+#include "Constants/StatsConstant.h"
+#include "Quests/Quest.h"
+#include "Items/Item.h"
+#include "Attacks/Attack.h"
 
-enum Gender {girl, boy};
+#include <vector>
+using namespace std;
 
 class Character
 {
     public:
         Character();
+        Character(sf::String name, int str, int agi, int tgh, Gender gender);   //      New character
+        Character(int saveID);                                                  //      Character Loading
+        void updateStats();
+        void updateCaracs(int str, int agi, int tgh);
 
     protected:
-
-    private:
         sf::String m_name;
-        int m_lvl;
-        CharStat m_stats;
         Gender m_gender;
+        int m_lvl;
+        int m_currentHealth;
+        int m_gold;
+        int m_caracs[StatsConstant::CaracsNumber];
+        int m_stats[StatsConstant::StatsNumber];
+        vector<Quest> m_quests;
+        vector<Item> m_items;
+        vector<Attack> m_attacks;
 };
 
 

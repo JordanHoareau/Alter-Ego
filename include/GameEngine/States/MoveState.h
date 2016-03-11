@@ -2,8 +2,7 @@
 #define MoveState_H
 
 #include "Constants/GameStateConstant.h"
-#include "GameEngine/States/PlayState.h"
-#include "GameEngine/Contexts/MoveContext.h"
+#include "PlayState.h"
 
 class MoveState : public PlayState {
     public:
@@ -29,7 +28,6 @@ class MoveState : public PlayState {
         static MoveState m_MoveState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
-        MoveContext *m_context;
 };
 
 #endif // MoveState_H

@@ -7,9 +7,6 @@ void InventoryState::init(){
     if(!m_texture.loadFromFile("img/InventoryState.png"))
         cout << "InventoryState - Image loading error" << endl;
 
-    m_context = InventoryContext::instance();
-    m_context->init();
-
     m_sprite.setTexture(m_texture);
     cout << "InventoryState - Init" << endl;
 }

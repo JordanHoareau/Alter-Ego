@@ -6,7 +6,7 @@
 
 class DialogQuest : public Quest {
     public:
-        DialogQuest(int id, int state);
+        DialogQuest(int id);
     protected:
     private:
         int m_targetID;

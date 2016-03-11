@@ -2,10 +2,9 @@
 #define CinematicState_H
 
 #include "Constants/GameStateConstant.h"
-#include "GameEngine/States/GameState.h"
-#include "GameEngine/Contexts/CinematicContext.h"
+#include "PlayState.h"
 
-class CinematicState : public GameState {
+class CinematicState : public PlayState {
     public:
         void init();
         void cleanup();
@@ -29,7 +28,7 @@ class CinematicState : public GameState {
         static CinematicState m_CinematicState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
-        CinematicContext *m_context;
 };
 
 #endif // CinematicState_H
+

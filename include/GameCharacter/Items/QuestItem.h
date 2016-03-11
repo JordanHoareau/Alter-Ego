@@ -1,13 +1,13 @@
 #ifndef QUESTITEM_H
 #define QUESTITEM_H
 
-#include "GameCharacter/Items/Item.h"
+#include "Item.h"
 
 
 class QuestItem : public Item
 {
     public:
-        QuestItem();
+        QuestItem(int id);
     protected:
     private:
 };
