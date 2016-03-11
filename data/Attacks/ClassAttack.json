@@ -1,0 +1,43 @@
+{
+    "attacks":[
+        {
+            "m_id":1001,
+            "m_name":"Coup de tête",
+            "m_basedamage":20,
+            "m_baseheal":0,
+            "m_range_min":0,
+            "m_range_min":1,
+            "m_isLine":true,
+            "m_description":"Le meilleur sort du jeu",
+            "m_lvlunlock":0,
+            "m_classID":0001
+        }
+        ,
+        {
+            "m_id":1001,
+            "m_name":"Coup de tête 2",
+            "m_basedamage":20,
+            "m_baseheal":0,
+            "m_range_min":0,
+            "m_range_min":1,
+            "m_isLine":true,
+            "m_description":"Le meilleur sort du jeu",
+            "m_lvlunlock":0,
+            "m_classID":0001
+        }
+        ,
+        {
+            "m_id":1002,
+            "m_name":"Coup de pied",
+            "m_basedamage":20,
+            "m_baseheal":0,
+            "m_range_min":0,
+            "m_range_min":2,
+            "m_isLine":true,
+            "m_description":"Le sort stylé du jeu",
+            "m_lvlunlock":0,
+            "m_classID":0002
+        }
+    ]
+}
+

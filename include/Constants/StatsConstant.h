@@ -20,6 +20,7 @@ namespace StatsConstant{
 
     const int CaracsRatio[CaracsNumber][StatsNumber] = {{10,5,5,5,0,0},     // Strength
                                                         {10,5,5,5,0,0},     // Agility
-                                                        {20,0,0,20,0,0}};   // Toughness
+                                                        {20,0,0,20,0,0}     // Toughness
+                                                       };
 }
 #endif // STATSCONSTANT_H

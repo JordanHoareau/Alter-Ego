@@ -5,12 +5,12 @@ Character::Character() {
         m_caracs[i] = 0;
     updateStats();
 
-    m_name = "Unamed";
+    m_name = "Unnamed";
     m_gender = boy;
     m_lvl = 0;
 }
 
-Character::Character(sf::String name, int str, int agi, int tgh, Gender gender) {
+Character::Character(sf::String name, int str, int agi, int tgh, Gender gender, int classID) {
 
     m_name = name;
     m_gender = gender;
@@ -23,6 +23,8 @@ Character::Character(sf::String name, int str, int agi, int tgh, Gender gender) 
     updateStats();
 
     m_currentHealth = m_stats[StatsConstant::HealthID];
+
+
 }
 
 Character::Character(int saveID) {

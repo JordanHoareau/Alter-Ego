@@ -11,7 +11,7 @@
 class ClassAttack : public Attack
 {
     public:
-        ClassAttack(sf::String attackname);
+        ClassAttack(int classID);
         virtual ~ClassAttack();
 
     protected:

@@ -14,7 +14,7 @@ class Character
 {
     public:
         Character();
-        Character(sf::String name, int str, int agi, int tgh, Gender gender);   //      New character
+        Character(sf::String name, int str, int agi, int tgh, Gender gender, int classID);   //      New character
         Character(int saveID);                                                  //      Character Loading
         void updateStats();
         void updateCaracs(int str, int agi, int tgh);
