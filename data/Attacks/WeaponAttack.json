@@ -1,0 +1,28 @@
+{
+    "weaponattacks":[
+        {
+            "m_attackID":2001,
+            "m_name":"Taillade",
+            "m_description":"Coup simple que n'importe quel épéiste sait faire.",
+            "m_unlocklvl":0,
+            "m_basedamage":[20],
+            "m_range":[0,1],
+            "m_aoe_radius":1,
+            "m_isLine":true,
+            "m_weaponID":0000
+        }
+        ,
+        {
+            "m_attackID":2002,
+            "m_name":"Charge",
+            "m_description":"Coup d'estoc en direction de la cible. ",
+            "m_unlocklvl":0,
+            "m_basedamage":[10],
+            "m_range":[0,5],
+            "m_aoe_radius":1,
+            "m_isLine":true,
+            "m_weaponID":0000
+        }
+    ]
+}
+
