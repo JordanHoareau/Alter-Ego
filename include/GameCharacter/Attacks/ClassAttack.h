@@ -1,25 +1,24 @@
 #ifndef CLASSATTACK_H
 #define CLASSATTACK_H
 
+#include <iostream>
+#include <fstream>
+#include <JSonParser/json.h>
+#include <SFML/Graphics.hpp>
+
 #include "Attack.h"
 
 class ClassAttack : public Attack
 {
     public:
-        ClassAttack(int attackID, sf::String name, sf::String description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoe_range, bool isLine, int classID)
-            :   Attack(attackID,name,description,unlocklvl,basedamage,range,aoe_range,isLine){
-                m_classID = classID;
-        }
-        ClassAttack()
-            : Attack(){
-                m_classID = 0;
-        }
+        ClassAttack(int classID);
         virtual ~ClassAttack();
-        virtual void init(int attackID, sf::String name, sf::String description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoeRange, bool isLine, int classID);
+
     protected:
 
     private:
-        int m_classID;
+        sf::String m_class;
+        int m_lvlunlock;
 };
 
 #endif // CLASSATTACK_H
