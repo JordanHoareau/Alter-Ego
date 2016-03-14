@@ -18,7 +18,7 @@ class PlayContext {
     private:
         static PlayContext m_PlayContext;
         static Character m_player;
-        vector<Map> m_maps;
+        static Map m_currentMap;
 };
 
 #endif // PLAYCONTEXT_H
