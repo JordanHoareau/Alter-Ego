@@ -6,22 +6,25 @@ using namespace std;
 
 #include "GameCharacter/Items/Item.h"
 
-enum State { hide, show, current, finish };
+enum State { hidden, available, current, finish };
 
 class Quest {
     public:
         Quest(int id);
 
-        bool isFinished(int id){
-            return m_state == finish;
-        }
     protected:
+        // Technical caracteristics
         int m_id;
+        vector<int> m_mandatoryQuests;
+        State m_state;
+        bool m_isStory;
+
+        // Gameplay caracteristics
         sf::String m_name;
+        sf::String m_description;
         int m_exp;
         int m_gold;
         vector<Item*> m_items;
-        State m_state;
 };
 
 #endif // QUEST_H

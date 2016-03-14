@@ -1,7 +1,11 @@
 #include "World/Map.h"
 
-Map::Map(int id=0){
+Map::Map(int id){
     m_id = id;
+
+    // TEMPORAIRE TEST
+    m_texture.loadFromFile("img/PlayState.png");
+    m_sprite.setTexture(m_texture);
 
 //    m_texture = JSON.getMapFromId(m_id);
 //    m_sprite.setTexture(m_texture);

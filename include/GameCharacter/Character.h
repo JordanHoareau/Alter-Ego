@@ -21,7 +21,7 @@ class Character
 {
     public:
         Character();
-        Character(sf::String& name, int str, int agi, int tgh, Gender gender, int classID, int weaponID, int lvl);      //      New character
+        Character(sf::String& name, int str, int agi, int tgh, Gender gender, int classID=0, int weaponID=0, int lvl=1);      //      New character
         Character(int saveID);                                                                  //      Character loaded
         void updateStats();
         void updateCaracs(int str, int agi, int tgh);

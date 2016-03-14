@@ -11,10 +11,15 @@ using namespace std;
 class PlayContext {
 
     public:
+        ~PlayContext() {}
         void init();
+        int getCurrentMapID(){
+            return m_currentMapID;
+        }
         static PlayContext* instance() {
             return &m_PlayContext;
         }
+
     private:
         static PlayContext m_PlayContext;
         static Character m_player;

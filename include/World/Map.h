@@ -8,9 +8,11 @@ using namespace std;
 
 class Map {
     public:
-        Map() {}
-        Map(int id);
+        Map(int id=0);
 
+        int getID(){
+            return m_id;
+        }
         sf::Sprite getSprite(){
             return m_sprite;
         }

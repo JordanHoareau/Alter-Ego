@@ -5,6 +5,7 @@
 
 class GameState {
     public:
+        ~GameState() {}
         virtual void init() = 0;
         virtual void cleanup() = 0;
 
