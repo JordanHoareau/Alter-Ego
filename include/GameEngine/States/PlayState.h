@@ -28,7 +28,6 @@ class PlayState : public GameState {
     private:
         static PlayState m_PlayState;
         PlayContext *m_context;
-        Map m_map;
 };
 
 #endif // PLAYSTATE_H
