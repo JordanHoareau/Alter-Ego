@@ -21,7 +21,7 @@ class Character
 {
     public:
         Character();
-        Character(sf::String name, int str, int agi, int tgh, Gender gender, int classID, int weaponID);      //      New character
+        Character(sf::String& name, int str, int agi, int tgh, Gender gender, int classID, int weaponID, int lvl);      //      New character
         Character(int saveID);                                                                  //      Character loaded
         void updateStats();
         void updateCaracs(int str, int agi, int tgh);
@@ -36,7 +36,6 @@ class Character
         int m_currentHealth;
         int m_caracs[StatsConstant::CaracsNumber];
         int m_stats[StatsConstant::StatsNumber];
-        int m_egopoints;
         int m_stamina;
         int m_energy;
         int m_classID;

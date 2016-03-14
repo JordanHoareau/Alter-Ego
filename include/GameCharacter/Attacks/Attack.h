@@ -9,7 +9,7 @@
 class Attack
 {
     public:
-        Attack(int attackID, sf::String name, sf::String description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoe_radius, bool isLine){
+        Attack(int attackID, sf::String name, sf::String description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoe_radius, bool isLine, bool isAvailable){
             m_attackID = attackID;
             m_name = name;
             m_description = description;
@@ -19,6 +19,7 @@ class Attack
             m_range[1] = range[1];
             m_aoe_radius = aoe_radius;
             m_isLine = isLine;
+            m_isAvailable = isAvailable;
         }
         Attack(){
             m_attackID = 0;
@@ -29,6 +30,7 @@ class Attack
             m_range[1] = 0;
             m_aoe_radius = 0;
             m_isLine = false;
+            m_isAvailable=false;
 
         }
         virtual ~Attack();
@@ -44,6 +46,7 @@ class Attack
         int m_range[2];
         int m_aoe_radius;
         bool m_isLine;
+        bool m_isAvailable;
 
     private:
 };

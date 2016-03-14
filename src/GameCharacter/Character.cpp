@@ -7,24 +7,23 @@ Character::Character() {
     updateStats();
 
     m_name = "Unnamed";
-    m_gender = boy;
+    m_gender = male;
     m_lvl = 0;
 }
 
-Character::Character(sf::String name, int str, int agi, int tgh, Gender gender, int classID, int weaponID) {
+Character::Character(sf::String& name, int str, int agi, int tgh, Gender gender, int classID=0, int weaponID=0, int lvl=1) {
 
     // Identification attributes
     m_name = name;
     m_gender = gender;
 
     // Battle attributes
-    m_lvl = 1;
+    m_lvl = lvl;
     m_currentHealth = m_stats[StatsConstant::HealthID];
     m_caracs[StatsConstant::StrengthID] = str;
     m_caracs[StatsConstant::AgilityID] = agi;
     m_caracs[StatsConstant::ToughnessID] = tgh;
     updateStats();                                          // get stats from caracteristics
-    m_egopoints = 5;
     m_stamina = 100;
     m_energy = 100;
     m_classID = classID;
@@ -47,8 +46,6 @@ Character::Character(sf::String name, int str, int agi, int tgh, Gender gender, 
         return;
     }
     for(unsigned int i = 0; i < attack_node.size() ; ++i ){
-          if( (attack_node[i]["m_unlocklvl"].asInt() <= m_lvl) ){
-            Attack* a = new Attack();
             // Creating base damage vector from JSON
             std::vector<int> basedamage;
             const Json::Value jbasedamage = attack_node[i]["m_basedamage"];
@@ -58,18 +55,19 @@ Character::Character(sf::String name, int str, int agi, int tgh, Gender gender, 
             const Json::Value jrange = attack_node[i]["m_range"];
             for(unsigned int j = 0; j<jrange.size(); j++) range[j] = jrange[j].asInt();
             // attack initialization from current values
-                a->init(
-                    attack_node[i]["m_attackID"].asInt(),
-                    attack_node[i]["m_name"].asString(),
-                    attack_node[i]["m_description"].asString(),
-                    attack_node[i]["m_unlocklvl"].asInt(),
-                    basedamage,
-                    range,
-                    attack_node[i]["m_aoe_radius"].asInt(),
-                    attack_node[i]["m_isLine"].asBool()
-                );
-                m_attacks.push_back(*a);
-          }
+
+            Attack* a = new Attack(
+                                    attack_node[i]["m_attackID"].asInt(),
+                                    attack_node[i]["m_name"].asString(),
+                                    attack_node[i]["m_description"].asString(),
+                                    attack_node[i]["m_unlocklvl"].asInt(),
+                                    basedamage,
+                                    range,
+                                    attack_node[i]["m_aoe_radius"].asInt(),
+                                    attack_node[i]["m_isLine"].asBool(),
+                                    (attack_node[i]["m_unlocklvl"].asInt() <= m_lvl)
+                                   );
+            m_attacks.push_back(*a);
     }
 
     // ------------------------

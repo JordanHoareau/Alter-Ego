@@ -14,7 +14,11 @@ class Map {
         int m_id;
         sf::Texture m_texture;
         sf::Sprite m_sprite;
-        vector<Character> m_chars;
+//        vector<NeutralCharacter> m_neutrals;
+//        int spawnRate;
+//        map<FoeCharacter,int> m_foesSpawnTable;
+        vector<Map> m_adjacentMaps;
+        vector<Map> m_subMaps;
 };
 
 #endif // MAP_H

@@ -6,8 +6,8 @@
 class ClassAttack : public Attack
 {
     public:
-        ClassAttack(int attackID, sf::String name, sf::String description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoe_range, bool isLine, int classID)
-            :   Attack(attackID,name,description,unlocklvl,basedamage,range,aoe_range,isLine){
+        ClassAttack(int attackID, sf::String name, sf::String description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoe_range, bool isLine, bool isAvailable, int classID)
+            :   Attack(attackID,name,description,unlocklvl,basedamage,range,aoe_range,isLine,isAvailable){
                 m_classID = classID;
         }
         ClassAttack()

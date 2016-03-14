@@ -7,8 +7,8 @@ class WeaponAttack: public Attack
 {
     public:
         // Constructors
-        WeaponAttack(int attackID, sf::String name, sf::String description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoe_range, bool isLine, int weaponID)
-            :   Attack(attackID,name,description,unlocklvl,basedamage,range,aoe_range,isLine){
+        WeaponAttack(int attackID, sf::String name, sf::String description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoe_range, bool isLine, bool isAvailable, int weaponID)
+            :   Attack(attackID,name,description,unlocklvl,basedamage,range,aoe_range,isLine,isAvailable){
                 m_weaponID = weaponID;
         }
         WeaponAttack()

@@ -1,7 +1,9 @@
 #ifndef STATSCONSTANT_H
 #define STATSCONSTANT_H
 
-enum Gender {girl, boy};
+enum Gender {female, male};
+enum Class {ranger, warrior};
+enum Weapon {daggers, greatsword};
 
 namespace StatsConstant{
 
