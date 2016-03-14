@@ -1,6 +1,6 @@
 #include "World/Map.h"
 
-Map::Map(int id){
+Map::Map(int id=0){
     m_id = id;
 
 //    m_texture = JSON.getMapFromId(m_id);

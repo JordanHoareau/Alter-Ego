@@ -4,13 +4,11 @@ PlayState PlayState::m_PlayState;
 
 void PlayState::init(){
     cout << "   PlayState - Init" << endl;
-    if(!m_texture.loadFromFile("img/PlayState.png"))
-        cout << "   PlayState - Image loading error" << endl;
 
     m_context = PlayContext::instance();
     m_context->init();
 
-    m_sprite.setTexture(m_texture);
+
 }
 
 void PlayState::cleanup(){
@@ -55,6 +53,6 @@ void PlayState::update(GameEngine *game){
 
 void PlayState::draw(GameEngine *game){
     game->m_window.clear();
-    game->m_window.draw(m_sprite);
+    game->m_window.draw(m_map.getSprite());
     game->m_window.display();
 }

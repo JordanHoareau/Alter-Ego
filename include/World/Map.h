@@ -8,7 +8,12 @@ using namespace std;
 
 class Map {
     public:
+        Map() {}
         Map(int id);
+
+        sf::Sprite getSprite(){
+            return m_sprite;
+        }
 
     protected:
         int m_id;

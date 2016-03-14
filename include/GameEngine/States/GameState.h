@@ -3,8 +3,7 @@
 
 #include "GameEngine/GameEngine.h"
 
-class GameState
-{
+class GameState {
     public:
         virtual void init() = 0;
         virtual void cleanup() = 0;
