@@ -1,16 +1,28 @@
 #ifndef GEARITEM_H
 #define GEARITEM_H
 
-#include "Item.h"
-#include "Constants/StatsConstant.h"
-#include "Constants/ItemConstant.h"
+#include "GameCharacter/Items/SellableItem.h"
 
-class GearItem : public Item {
+
+class GearItem : public SellableItem
+{
     public:
-        GearItem(int id);
+        GearItem(int id, sf::String name, sf::String description, int sellvalue, int buyvalue, int unlocklvl, int strbonus, int agibonus, int tghbonus)
+            :   SellableItem(id,name,description,sellvalue,buyvalue){
+            m_unlocklvl = unlocklvl;
+            m_strbonus = strbonus;
+            m_agibonus = agibonus;
+            m_tghbonus = tghbonus;
+            }
+        virtual ~GearItem();
+
     protected:
-        int m_category;
-        int m_bonus[StatsConstant::CaracsNumber];
+
+    private:
+        int m_unlocklvl;
+        int m_strbonus;
+        int m_agibonus;
+        int m_tghbonus;
 };
 
 #endif // GEARITEM_H
