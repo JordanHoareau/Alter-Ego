@@ -12,6 +12,10 @@ class Item
             m_name = name;
             m_description = description;
         }
+        int getID() const {return m_id;}
+        friend bool operator<(const Item& i1, const Item& i2){
+            return i1.getID() < i2.getID();
+        }
     protected:
         int m_id;
         sf::String m_name;
