@@ -17,6 +17,7 @@ class GearItem : public SellableItem
             m_tghbonus = tghbonus;
             }
         virtual ~GearItem();
+        int getGearType(){return m_geartype;}
 
     protected:
 
