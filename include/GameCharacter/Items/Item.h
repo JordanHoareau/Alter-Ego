@@ -6,6 +6,7 @@
 class Item
 {
     public:
+        Item(){}
         Item(int id, sf::String name, sf::String description){
             m_id = id;
             m_name = name;

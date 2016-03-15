@@ -6,6 +6,7 @@
 class SellableItem : public Item
 {
     public:
+        SellableItem(){}
         SellableItem(int id, sf::String name, sf::String description, int sellvalue, int buyvalue)
             :Item(id,name,description){
             m_sellvalue = sellvalue;

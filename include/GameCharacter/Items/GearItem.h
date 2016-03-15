@@ -7,8 +7,10 @@
 class GearItem : public SellableItem
 {
     public:
-        GearItem(int id, sf::String name, sf::String description, int sellvalue, int buyvalue, int unlocklvl, int strbonus, int agibonus, int tghbonus)
+        GearItem(){}
+        GearItem(int id, sf::String name, sf::String description, int sellvalue, int buyvalue, int geartype, int unlocklvl, int strbonus, int agibonus, int tghbonus)
             :   SellableItem(id,name,description,sellvalue,buyvalue){
+            m_geartype = geartype;
             m_unlocklvl = unlocklvl;
             m_strbonus = strbonus;
             m_agibonus = agibonus;
@@ -19,6 +21,7 @@ class GearItem : public SellableItem
     protected:
 
     private:
+        int m_geartype;
         int m_unlocklvl;
         int m_strbonus;
         int m_agibonus;
