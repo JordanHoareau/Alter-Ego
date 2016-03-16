@@ -2,13 +2,13 @@
 
 QuestState QuestState::m_QuestState;
 
-void QuestState::init(){
+void QuestState::init(int option){
+    cout << "QuestState - Init" << endl;
 
     if(!m_texture.loadFromFile("img/QuestState.png"))
         cout << "QuestState - Image loading error" << endl;
 
     m_sprite.setTexture(m_texture);
-    cout << "QuestState - Init" << endl;
 }
 
 void QuestState::cleanup(){

@@ -2,7 +2,7 @@
 
 MenuState MenuState::m_MenuState;
 
-void MenuState::init(){
+void MenuState::init(int option){
 
     if(!m_texture.loadFromFile("img/MenuState.png"))
         cout << "MenuState - Image loading error" << endl;

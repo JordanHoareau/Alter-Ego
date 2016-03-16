@@ -2,11 +2,12 @@
 #define GAMESTATE_H
 
 #include "GameEngine/GameEngine.h"
+#include "Constants/GameStateConstant.h"
 
 class GameState {
     public:
         ~GameState() {}
-        virtual void init(int option=0) = 0;
+        virtual void init(int option=GameStateConstant::NoOption) = 0;
         virtual void cleanup() = 0;
 
         virtual void pause() = 0;

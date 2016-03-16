@@ -6,7 +6,7 @@
 
 class QuestState : public MenuState {
     public:
-        void init();
+        void init(int option=GameStateConstant::NoOption);
         void cleanup();
 
         void pause();

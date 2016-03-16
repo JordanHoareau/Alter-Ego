@@ -1,10 +1,10 @@
-#ifndef SettingsState_H
-#define SettingsState_H
+#ifndef SAVESTATE_H
+#define SAVESTATE_H
 
 #include "Constants/GameStateConstant.h"
 #include "MenuState.h"
 
-class SettingsState : public MenuState {
+class SaveState : public MenuState {
     public:
         void init(int option=GameStateConstant::NoOption);
         void cleanup();
@@ -17,17 +17,17 @@ class SettingsState : public MenuState {
         void draw(GameEngine *game);
 
         void print(ostream &flux) const{
-            flux << "SettingsState";
+            flux << "SaveState";
         }
 
-        static SettingsState* instance() {
-            return &m_SettingsState;
+        static SaveState* instance() {
+            return &m_SaveState;
         }
 
     private:
-        static SettingsState m_SettingsState;
+        static SaveState m_SaveState;
         sf::Sprite m_sprite;
         sf::Texture m_texture;
 };
 
-#endif // SettingsState_H
+#endif // SAVESTATE_H

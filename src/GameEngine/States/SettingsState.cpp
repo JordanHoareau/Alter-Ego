@@ -2,7 +2,7 @@
 
 SettingsState SettingsState::m_SettingsState;
 
-void SettingsState::init(){
+void SettingsState::init(int option){
 
     if(!m_texture.loadFromFile("img/SettingsState.png"))
         cout << "SettingsState - Image loading error" << endl;

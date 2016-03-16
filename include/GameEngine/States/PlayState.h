@@ -7,7 +7,7 @@
 
 class PlayState : public GameState {
     public:
-        void init(int option=0);
+        void init(int option=GameStateConstant::NoOption);
         void cleanup();
 
         void pause();

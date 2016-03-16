@@ -18,7 +18,7 @@ class GameEngine
 
         void changeState(GameState *state, int option=0);
         void changeState(int state, int option=0);
-        void pushState(GameState *state, int option=0);
+        void pushState(GameState *state, int option=GameStateConstant::NoOption);
         void popState();
 
         void handleEvents();

@@ -2,7 +2,7 @@
 
 InventoryState InventoryState::m_InventoryState;
 
-void InventoryState::init(){
+void InventoryState::init(int option){
 
     if(!m_texture.loadFromFile("img/InventoryState.png"))
         cout << "InventoryState - Image loading error" << endl;
