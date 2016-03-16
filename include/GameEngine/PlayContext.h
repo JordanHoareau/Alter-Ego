@@ -2,6 +2,7 @@
 #define PLAYCONTEXT_H
 
 #include "Constants/StatsConstant.h"
+#include "Constants/ReturnConstant.h"
 #include "GameCharacter/Character.h"
 #include "World/Map.h"
 #include <vector>
@@ -13,6 +14,7 @@ class PlayContext {
     public:
         ~PlayContext() {}
         void init();
+        int loadFromSave(int id);
         int getCurrentMapID(){
             return m_currentMapID;
         }

@@ -6,7 +6,7 @@
 
 class IntroState : public GameState {
     public:
-        void init();
+        void init(int option=0);
         void cleanup();
 
         void pause();

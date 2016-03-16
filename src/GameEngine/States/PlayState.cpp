@@ -2,11 +2,16 @@
 
 PlayState PlayState::m_PlayState;
 
-void PlayState::init(){
+void PlayState::init(int option){
     cout << "   PlayState - Init" << endl;
 
     m_context = PlayContext::instance();
-    m_context->init();
+//    @option 0 means initialization, 1-2-3 is the number of the save the be loaded
+    if(option==0)
+        m_context->init();
+    else if(option>0 && option<4)
+        m_context->loadFromSave(option);
+
 
 //    m_map = getMapFromID(m_context->getCurrentMapID());
     m_map = new Map();     // TEMPORARY TEST

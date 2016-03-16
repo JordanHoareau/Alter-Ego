@@ -2,7 +2,7 @@
 
 IntroState IntroState::m_IntroState;
 
-void IntroState::init(){
+void IntroState::init(int option){
     cout << "   IntroState - Init" << endl;
 
     if(!m_texture.loadFromFile("img/IntroState.png"))
@@ -35,6 +35,8 @@ void IntroState::handleEvents(GameEngine *game){
             case sf::Event::KeyPressed:
                 if(event.key.code == sf::Keyboard::Right)
                     game->changeState(GameStateConstant::PlayState);
+                if(event.key.code == sf::Keyboard::Up)
+                    game->changeState(GameStateConstant::PlayState, 2);
                 break;
             default:
                 break;

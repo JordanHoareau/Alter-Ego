@@ -8,3 +8,10 @@ void PlayContext::init(){
     //set Character
     //set current map
 }
+
+int PlayContext::loadFromSave(int id){
+    cout << "       PlayContext - LoadFromSave " << id << endl;
+
+    // load from save.json the save ID
+    return ReturnConstant::Success;
+}

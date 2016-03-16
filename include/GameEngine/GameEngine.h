@@ -16,9 +16,9 @@ class GameEngine
         void init(const sf::String title, int width=640, int height=480);
         void cleanup();
 
-        void changeState(GameState *state);
-        void changeState(int state);
-        void pushState(GameState *state);
+        void changeState(GameState *state, int option=0);
+        void changeState(int state, int option=0);
+        void pushState(GameState *state, int option=0);
         void popState();
 
         void handleEvents();

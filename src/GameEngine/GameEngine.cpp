@@ -2,6 +2,7 @@
 #include "GameEngine/States/GameState.h"
 #include "GameEngine/States/IntroState.h"
 #include "GameEngine/States/PlayState.h"
+/*
 #include "GameEngine/States/CinematicState.h"
 #include "GameEngine/States/MoveState.h"
 #include "GameEngine/States/BattleState.h"
@@ -9,6 +10,7 @@
 #include "GameEngine/States/QuestState.h"
 #include "GameEngine/States/InventoryState.h"
 #include "GameEngine/States/SettingsState.h"
+*/
 
 //    Initialization of the Game Engine
 //    @title : Title of the window
@@ -36,7 +38,7 @@ void GameEngine::cleanup(){
 //        Change the state
 //        @state The new state
 //        Clean up the old state and push the new one
-void GameEngine::changeState(GameState *state){
+void GameEngine::changeState(GameState *state, int option){
     cout << endl << "GameEngine - changeState - " << *state << endl;
     // Delete the current state
     if(!states.empty()){
@@ -46,67 +48,71 @@ void GameEngine::changeState(GameState *state){
 
     // store and init the new state
     states.push_back(state);
-    states.back()->init();
+    states.back()->init(option);
 }
 
 //        Change the state using its constant index
 //        @state The index of the state (cf GameStateConstant.h)
 //        Call the other ChangeState method with a State object
-void GameEngine::changeState(int state){
+void GameEngine::changeState(int state, int option){
+    GameState *theState;
     switch(state){
         case GameStateConstant::IntroState:
-            changeState(IntroState::instance());
+            theState = IntroState::instance();
             break;
         case GameStateConstant::PlayState:
-            changeState(PlayState::instance());
+            theState = PlayState::instance();
             break;
+    /*
         case GameStateConstant::CinematicState:
-            changeState(CinematicState::instance());
+            theState = CinematicState::instance();
             break;
         case GameStateConstant::MoveState:
-            changeState(MoveState::instance());
+            theState = MoveState::instance();
             break;
         case GameStateConstant::BattleState:
-            changeState(BattleState::instance());
+            theState = BattleState::instance();
             break;
         case GameStateConstant::MenuState:
-            changeState(MenuState::instance());
+            theState = MenuState::instance();
             break;
         case GameStateConstant::InventoryState:
-            changeState(InventoryState::instance());
+            theState = InventoryState::instance();
             break;
         case GameStateConstant::QuestState:
-            changeState(QuestState::instance());
+            theState = QuestState::instance();
             break;
         case GameStateConstant::SettingsState:
-            changeState(SettingsState::instance());
+            theState = SettingsState::instance();
             break;
+    */
         default:
             cout << "GameEngine - ChangeState ERROR INVALID INDEX" << endl;
+            return;
             break;
     }
+    changeState(theState, option);
 }
 
 //        Push state
 //        @state The new state
 //        Pause the current state and push the new One
 //        The old state isn't popped, it will be resumed when the new one will be popped
-void GameEngine::pushState(GameState *state)
-{
+void GameEngine::pushState(GameState *state, int option){
+    cout << "GameEngine - pushState" << endl;
 	// pause current state
 	if (!states.empty())
 		states.back()->pause();
 
 	// store and init the new state
 	states.push_back(state);
-	states.back()->init();
-    cout << "GameEngine - pushState" << endl;
+	states.back()->init(option);
 }
 
 //        Pop state
 //        Pop the current state, then resume to the last one
-void GameEngine::popState()
-{
+void GameEngine::popState(){
+    cout << "GameEngine - popState" << endl;
 	// cleanup the current state
 	if (!states.empty()) {
 		states.back()->cleanup();
@@ -116,7 +122,6 @@ void GameEngine::popState()
 	// resume previous state
 	if (!states.empty())
 		states.back()->resume();
-    cout << "GameEngine - popState" << endl;
 }
 
 //        Give the handleEvents task to the current state
