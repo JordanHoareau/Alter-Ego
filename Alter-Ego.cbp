@@ -16,8 +16,6 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
-					<Add directory="include/GameCharacter/Quests" />
-					<Add directory="include/GameCharacter" />
 				</Compiler>
 				<Linker>
 					<Add library="lib\libsfml-graphics-d.a" />
@@ -35,8 +33,6 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include" />
-					<Add directory="include/GameCharacter/Quests" />
-					<Add directory="include/GameCharacter" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -84,7 +80,12 @@
 		<Unit filename="include/GameEngine/PlayContext.h" />
 		<Unit filename="include/GameEngine/States/GameState.h" />
 		<Unit filename="include/GameEngine/States/IntroState.h" />
+		<Unit filename="include/GameEngine/States/InventoryState.h" />
+		<Unit filename="include/GameEngine/States/MenuState.h" />
 		<Unit filename="include/GameEngine/States/PlayState.h" />
+		<Unit filename="include/GameEngine/States/QuestState.h" />
+		<Unit filename="include/GameEngine/States/SaveState.h" />
+		<Unit filename="include/GameEngine/States/SettingsState.h" />
 		<Unit filename="include/JSonParser/json-forwards.h" />
 		<Unit filename="include/JSonParser/json.h" />
 		<Unit filename="include/World/Map.h" />
@@ -104,7 +105,12 @@
 		<Unit filename="src/GameEngine/GameEngine.cpp" />
 		<Unit filename="src/GameEngine/PlayContext.cpp" />
 		<Unit filename="src/GameEngine/States/IntroState.cpp" />
+		<Unit filename="src/GameEngine/States/InventoryState.cpp" />
+		<Unit filename="src/GameEngine/States/MenuState.cpp" />
 		<Unit filename="src/GameEngine/States/PlayState.cpp" />
+		<Unit filename="src/GameEngine/States/QuestState.cpp" />
+		<Unit filename="src/GameEngine/States/SaveState.cpp" />
+		<Unit filename="src/GameEngine/States/SettingsState.cpp" />
 		<Unit filename="src/JSonParser/jsoncpp.cpp" />
 		<Unit filename="src/World/Map.cpp" />
 		<Unit filename="src/main.cpp" />
