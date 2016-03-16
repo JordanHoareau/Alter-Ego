@@ -15,10 +15,11 @@ class Inventory
             m_gold = gold;
         }
         virtual ~Inventory();
-        void addGearItem(GearItem g);
-        void addQuestItem(QuestItem q);
-        void addConsumableItem(ConsumableItem c);
-        void addGold(int g);
+        void updateGearItem(GearItem g, int qty);
+        void updateQuestItem(QuestItem q, int qty);
+        void updateConsumableItem(ConsumableItem c, int qty);
+        void updateGold(int g);
+        void unequipGear(GearItem g);
         void equipGear(GearItem g);
 
     protected:

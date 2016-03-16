@@ -4,17 +4,37 @@ Inventory::~Inventory()
     //dtor
 }
 
-void Inventory::addGearItem(GearItem g){
-    m_gearslots[g]++;
+void Inventory::updateGearItem(GearItem g, int qty){
+    m_gearslots[g]+=qty;
 }
-void Inventory::addQuestItem(QuestItem q){
-    m_questslots[q]++;
+void Inventory::updateQuestItem(QuestItem q, int qty){
+    m_questslots[q]+=qty;
 }
-void Inventory::addConsumableItem(ConsumableItem c){
-    m_consumableslots[c]++;
+void Inventory::updateConsumableItem(ConsumableItem c, int qty){
+    m_consumableslots[c]+=qty;
 }
-void Inventory::addGold(int g){
+void Inventory::updateGold(int g){
     m_gold+=g;
 }
+
+void Inventory::unequipGear(GearItem g){
+    if( m_gear[g.getGearType()].getGearType() == 0 ) return;
+    else{
+        m_gear[g.getGearType()] = *(new GearItem());
+        GearItem* gear = new GearItem(g);
+        updateGearItem(*gear,1);
+    }
+
+}
 void Inventory::equipGear(GearItem g){
+    if( m_gear[g.getGearType()].getGearType() == 0 ){
+        GearItem* gear = new GearItem(g);
+        m_gear[g.getGearType()] = *gear;
+        updateGearItem(g,-1);
+    }
+    else{
+        GearItem* gear = new GearItem(m_gear[g.getGearType()]);
+        updateGearItem(*gear,1);
+        m_gear[g.getGearType()] = g;
+    }
 }
