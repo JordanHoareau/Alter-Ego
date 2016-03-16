@@ -21,6 +21,7 @@ class Inventory
         void updateGold(int g);
         void unequipGear(GearItem g);
         void equipGear(GearItem g);
+        void print();
 
     protected:
 

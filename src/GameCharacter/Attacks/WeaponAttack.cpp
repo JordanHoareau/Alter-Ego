@@ -8,3 +8,8 @@ void WeaponAttack::init(int attackID, std::string name, std::string description,
     Attack::init(attackID, name, description, unlocklvl, basedamage, Radius, aoeRadius, isLine);
     m_weaponID = weaponID;
 }
+
+void WeaponAttack::print(){
+    Attack::print();
+    std::cout << "Weapon ID : " << m_weaponID << std::endl ;
+}

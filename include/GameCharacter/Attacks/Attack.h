@@ -34,7 +34,7 @@ class Attack
         }
         virtual ~Attack();
         virtual void init(int attackID, std::string name, std::string description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoeRadius, bool isLine);
-        virtual void print();
+        void print();
 
     protected:
         int m_attackID;

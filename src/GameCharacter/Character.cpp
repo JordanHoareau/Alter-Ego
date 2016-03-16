@@ -68,6 +68,8 @@ Character::Character(std::string& name, int str, int agi, int tgh, Gender gender
                                     (attack_node[i]["m_unlocklvl"].asInt() <= m_lvl)
                                    );
             m_attacks.push_back(*a);
+            a->print();
+            std::cout << std::endl;
     }
 
     // ------------------------
@@ -110,6 +112,8 @@ Character::Character(std::string& name, int str, int agi, int tgh, Gender gender
                         classattack_node[i]["m_classID"].asInt()
                      );
             m_attacks.push_back(*ca);
+            ca->print();
+            std::cout << std::endl;
           }
     }
 
@@ -151,22 +155,12 @@ Character::Character(std::string& name, int str, int agi, int tgh, Gender gender
                     weaponattack_node[i]["m_weaponID"].asInt()
                 );
                 m_attacks.push_back(*wa);
+                wa->print();
+                std::cout << std::endl;
           }
     }
-    std::cout << "Attack List : " << std::endl;
-    for(unsigned int i = 0; i < m_attacks.size() ; i++){
-        Attack& att = m_attacks[i];
-        att.print();
-    }
-
-
-
     // Offbattle attributes
     m_gold = 0;
-
-
-
-
 }
 
 Character::Character(int saveID) {

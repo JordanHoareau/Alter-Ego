@@ -20,6 +20,7 @@ class WeaponAttack: public Attack
         // Initialization method
         // Allow user to instantiate a WeaponAttack object with attributes given as arguments
         virtual void init(int attackID, std::string name, std::string description, int unlocklvl, std::vector<int> basedamage, int Radius[2], int aoeRadius, bool isLine, int weaponID);
+        void print();
 
     protected:
 

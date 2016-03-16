@@ -8,3 +8,8 @@ void ClassAttack::init(int attackID, std::string name, std::string description, 
     Attack::init(attackID, name, description, unlocklvl, basedamage, Radius, aoeRadius, isLine);
     m_classID = classID;
 }
+
+void ClassAttack::print() {
+    Attack::print();
+    std::cout << "Class ID : " << m_classID << std::endl;
+}

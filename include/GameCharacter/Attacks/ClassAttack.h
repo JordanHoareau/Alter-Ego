@@ -16,6 +16,7 @@ class ClassAttack : public Attack
         }
         virtual ~ClassAttack();
         virtual void init(int attackID, std::string name, std::string description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoeRange, bool isLine, int classID);
+        void print();
     protected:
 
     private:

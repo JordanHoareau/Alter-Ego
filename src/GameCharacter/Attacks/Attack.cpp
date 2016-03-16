@@ -17,5 +17,16 @@ void Attack::init(int attackID, std::string name, std::string description, int u
 }
 
 void Attack::print(){
-    std::cout << "ID : " << m_attackID << std::endl;
+    std::cout <<    "ID : " << m_attackID << std::endl <<
+                    "Name : " << m_name << std::endl <<
+                    "Description : " << m_description << std::endl <<
+                    "Unlock lvl : " << m_unlocklvl << std::endl <<
+                    "BaseDamage : ";
+    for(std::vector<int>::const_iterator i = m_basedamage.begin(); i!=m_basedamage.end(); ++i){
+        std::cout << *i << " ";
+    }
+    std::cout << std::endl <<
+                    "Range : " << m_range[0] << "-" << m_range[1] << std::endl<<
+                    "AoE Radius : " << m_aoe_radius << std::endl <<
+                    "Line : " << m_isLine << std::endl;
 }

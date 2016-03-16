@@ -38,3 +38,5 @@ void Inventory::equipGear(GearItem g){
         m_gear[g.getGearType()] = g;
     }
 }
+
+void Inventory::print(){}
