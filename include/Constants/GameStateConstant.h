@@ -11,6 +11,7 @@ namespace GameStateConstant {
     const int QuestState(7);
     const int InventoryState(8);
     const int SettingsState(9);
+    const int SaveState(10);
 
     const int NoOption(0);
     const int LoadSave1(1);
