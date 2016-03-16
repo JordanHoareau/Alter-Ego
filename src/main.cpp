@@ -1,8 +1,12 @@
 #include "GameEngine/GameEngine.h"
 #include "Constants/GameStateConstant.h"
-#include "GameCharacter/Inventory.h"
-
+#include "GameCharacter/Characters/Player/Inventory.h"
+#include "GameCharacter/Characters/Player/Player.h"
+#include <vector>
+#include <iostream>
+#include <array>
 int main(int argc, char *argv[]){
+
     GameEngine game;
     game.init("Alter Ego");
 

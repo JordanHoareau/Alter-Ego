@@ -1,4 +1,4 @@
-#include "GameCharacter/Inventory.h"
+#include "GameCharacter/Characters/Player/Inventory.h"
 Inventory::~Inventory()
 {
     //dtor
