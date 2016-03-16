@@ -20,8 +20,8 @@ class Quest {
         bool m_isStory;
 
         // Gameplay caracteristics
-        sf::String m_name;
-        sf::String m_description;
+        std::string m_name;
+        std::string m_description;
         int m_exp;
         int m_gold;
         vector<Item*> m_items;

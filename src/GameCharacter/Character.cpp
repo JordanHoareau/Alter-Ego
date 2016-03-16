@@ -11,7 +11,7 @@ Character::Character() {
     m_lvl = 0;
 }
 
-Character::Character(sf::String& name, int str, int agi, int tgh, Gender gender, int classID, int weaponID, int lvl) {
+Character::Character(std::string& name, int str, int agi, int tgh, Gender gender, int classID, int weaponID, int lvl) {
 
     // Identification attributes
     m_name = name;

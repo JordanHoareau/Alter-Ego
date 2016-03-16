@@ -12,7 +12,7 @@ class SellableItem : public Item
             m_sellvalue = s.m_sellvalue;
             m_buyvalue = s.m_buyvalue;
         }
-        SellableItem(int id, sf::String name, sf::String description, int sellvalue, int buyvalue)
+        SellableItem(int id, std::string name, std::string description, int sellvalue, int buyvalue)
             :Item(id,name,description){
             m_sellvalue = sellvalue;
             m_buyvalue = buyvalue;

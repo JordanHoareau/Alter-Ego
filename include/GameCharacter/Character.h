@@ -1,7 +1,6 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
 
-#include <SFML/Graphics.hpp>
 #include <fstream>
 #include <string>
 #include <JSonParser/json-forwards.h>
@@ -21,14 +20,14 @@ class Character
 {
     public:
         Character();
-        Character(sf::String& name, int str, int agi, int tgh, Gender gender, int classID=0, int weaponID=0, int lvl=1);      //      New character
+        Character(std::string& name, int str, int agi, int tgh, Gender gender, int classID=0, int weaponID=0, int lvl=1);      //      New character
         Character(int saveID);                                                                  //      Character loaded
         void updateStats();
         void updateCaracs(int str, int agi, int tgh);
 
     protected:
         // Identification attributes
-        sf::String m_name;
+        std::string m_name;
         Gender m_gender;
 
         // Battle attributes

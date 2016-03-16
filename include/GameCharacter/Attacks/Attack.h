@@ -3,13 +3,12 @@
 
 #include <iostream>
 #include <string>
-#include <SFML/Graphics.hpp>
 #include <vector>
 
 class Attack
 {
     public:
-        Attack(int attackID, sf::String name, sf::String description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoe_radius, bool isLine, bool isAvailable){
+        Attack(int attackID, std::string name, std::string description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoe_radius, bool isLine, bool isAvailable){
             m_attackID = attackID;
             m_name = name;
             m_description = description;
@@ -34,13 +33,13 @@ class Attack
 
         }
         virtual ~Attack();
-        virtual void init(int attackID, sf::String name, sf::String description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoeRadius, bool isLine);
+        virtual void init(int attackID, std::string name, std::string description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoeRadius, bool isLine);
         virtual void print();
 
     protected:
         int m_attackID;
-        sf::String m_name;
-        sf::String m_description;
+        std::string m_name;
+        std::string m_description;
         int m_unlocklvl;
         std::vector<int> m_basedamage;
         int m_range[2];

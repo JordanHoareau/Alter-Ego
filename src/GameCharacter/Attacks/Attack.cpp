@@ -5,7 +5,7 @@ Attack::~Attack()
 {
 }
 
-void Attack::init(int attackID, sf::String name, sf::String description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoeRadius, bool isLine){
+void Attack::init(int attackID, std::string name, std::string description, int unlocklvl, std::vector<int> basedamage, int range[2], int aoeRadius, bool isLine){
     m_attackID = attackID;
     m_name = name;
     m_description = description;

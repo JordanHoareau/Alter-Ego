@@ -2,6 +2,7 @@
 #define GAMEENGINE_H
 
 #include <SFML/Graphics.hpp>
+#include <string>
 #include <vector>
 #include <iostream>
 using namespace std;
