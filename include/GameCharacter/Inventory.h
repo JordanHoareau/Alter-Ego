@@ -1,6 +1,7 @@
 #ifndef INVENTORY_H
 #define INVENTORY_H
 
+#include <iostream>
 #include <map>
 #include "GameCharacter/Items/GearItem.h"
 #include "GameCharacter/Items/ConsumableItem.h"
@@ -10,17 +11,21 @@
 class Inventory
 {
     public:
-        Inventory(){}
+        Inventory(){
+            m_gold = 0;
+            for(int i = 0; i < ItemConstant::GearTypesNumber; i++) m_gear[i] = *(new GearItem(0,"","",0,0,-1,0,0,0,0,true));
+        }
         Inventory(int gold){
             m_gold = gold;
+            for(int i = 0; i < ItemConstant::GearTypesNumber; i++) m_gear[i] = *(new GearItem(0,"","",0,0,-1,0,0,0,0,true));
         }
         virtual ~Inventory();
-        void updateGearItem(GearItem g, int qty);
-        void updateQuestItem(QuestItem q, int qty);
-        void updateConsumableItem(ConsumableItem c, int qty);
+        void updateGearItem(GearItem& g, int qty);
+        void updateQuestItem(Item& q, int qty);
+        void updateConsumableItem(ConsumableItem& c, int qty);
         void updateGold(int g);
-        void unequipGear(GearItem g);
-        void equipGear(GearItem g);
+        void unequipGear(GearItem& g);
+        void equipGear(GearItem& g);
         void print();
 
     protected:
@@ -29,7 +34,7 @@ class Inventory
         int m_gold;
         std::map<GearItem, int> m_gearslots;
         std::map<ConsumableItem, int> m_consumableslots;
-        std::map<QuestItem, int> m_questslots;
+        std::map<Item, int> m_questslots;
         GearItem m_gear[ItemConstant::GearTypesNumber];
 };
 

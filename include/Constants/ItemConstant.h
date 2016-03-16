@@ -1,7 +1,7 @@
 #ifndef ITEMCONSTANT_H
 #define ITEMCONSTANT_H
 
-enum Gear{ Weapon, Head, BreastPlate, Gloves, Legs, Boots};
+enum Gear{ Weapon=1, Head, BreastPlate, Gloves, Legs, Boots};
 
 namespace ItemConstant{
 
