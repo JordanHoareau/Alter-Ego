@@ -6,7 +6,7 @@
 class ConsumableItem : public SellableItem {
     public:
         ConsumableItem(int id, std::string name, std::string description, int sellvalue, int buyvalue, int healthbonus)
-            : SellableItem(id,name,description,sellvalue,buyvalue){
+            : SellableItem(id){
             m_healthbonus = healthbonus;
             }
     protected:
