@@ -36,10 +36,10 @@ class SellableItem : public Item
         virtual ~SellableItem();
 
     protected:
-
-    private:
         int m_sellvalue;
         int m_buyvalue;
+
+    private:
 };
 
 #endif // SELLABLEITEM_H

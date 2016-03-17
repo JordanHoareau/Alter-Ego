@@ -13,7 +13,7 @@ class Inventory
     public:
         Inventory(){
             m_gold = 0;
-            for(int i = 0; i < ItemConstant::GearTypesNumber; i++) m_gear[i] = *(new GearItem(0,"","",0,0,-1,0,0,0,0,true));
+            for(int i = 0; i < ItemConstant::GearTypesNumber; i++) m_gear[i] = *(new GearItem(0));
         }
         Inventory(const Inventory& i){
             m_gold = i.m_gold;
@@ -24,7 +24,7 @@ class Inventory
         }
         Inventory(int gold){
             m_gold = gold;
-            for(int i = 0; i < ItemConstant::GearTypesNumber; i++) m_gear[i] = *(new GearItem(0,"","",0,0,-1,0,0,0,0,true));
+            for(int i = 0; i < ItemConstant::GearTypesNumber; i++) m_gear[i] = *(new GearItem(0));
         }
         virtual ~Inventory();
         void updateGearItem(GearItem& g, int qty);

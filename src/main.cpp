@@ -17,9 +17,12 @@ int main(int argc, char *argv[]){
     Player* Jordy = new Player(j,1,1,1,male,*i,a,questbook,100,0,0,1);
     Jordy->print();
     */
-    SellableItem* i = new SellableItem(2001);
+    GearItem* i = new GearItem(3001);
 
-    std::cout << i->getID() << " " << i->getName() << " - " << i->getDescription() << " | Buy : " << i->getBuyValue() << " - Sell : " << i->getSellValue() << std::endl;
+    std::cout << i->getID() << " " << i->getName() << " - " << i->getDescription() <<
+    " | Buy : " << i->getBuyValue() << " - Sell : " << i->getSellValue() << std::endl <<
+    " GearType : " << i->getGearType() << "Unlocked at : " << i->getUnlockLvl() << std::endl <<
+    "Bonuses : " << i->getStrBonus() << "-" << i->getAgiBonus() << "-" <<  i->getTghBonus() << std::endl;
     GameEngine game;
     game.init("Alter Ego");
 

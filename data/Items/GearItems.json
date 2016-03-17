@@ -1,7 +1,20 @@
 {
     "gearitems":[
         {
-            "m_itemID":2001,
+            "m_itemID":0,
+            "m_name":"",
+            "m_description":"",
+            "m_sellvalue":0,
+            "m_buyvalue":0,
+            "m_geartype":0,
+            "m_unlocklvl":0,
+            "m_strbonus":0,
+            "m_agibonus":0,
+            "m_tghbonus":0
+        }
+        ,
+        {
+            "m_itemID":3001,
             "m_name":"Bâton du berger",
             "m_description":"Le bâton de l'ambiance",
             "m_sellvalue":10,
@@ -14,11 +27,16 @@
         }
         ,
         {
-            "m_itemID":2002,
+            "m_itemID":3002,
             "m_name":"Bouse de vache",
             "m_description":"Un fertiliseur hoors du commun !",
-            "m_sellvalue":1,
-            "m_buyvalue":5
+            "m_sellvalue":10,
+            "m_buyvalue":50,
+            "m_geartype":1,
+            "m_unlocklvl":10,
+            "m_strbonus":5,
+            "m_agibonus":5,
+            "m_tghbonus":6
         }
     ]
 }
