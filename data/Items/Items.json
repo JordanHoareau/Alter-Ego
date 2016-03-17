@@ -1,53 +1,16 @@
 {
-    "classattacks":[
+    "items":[
         {
-            "m_attackID":1001,
-            "m_name":"Direct",
-            "m_description":"Effectue un direct du droit.",
-            "m_unlocklvl":0,
-            "m_basedamage":[20],
-            "m_range":[0,1],
-            "m_aoe_radius":1,
-            "m_isLine":true,
-            "m_classID":0000
+            "m_itemID":1001,
+            "m_name":"Bâton du berger",
+            "m_description":"Le bâton de l'ambiance"
         }
         ,
         {
-            "m_attackID":1002,
-            "m_name":"Fouetté",
-            "m_description":"Effectue un fouetté du pied gauche.",
-            "m_unlocklvl":0,
-            "m_basedamage":[30],
-            "m_range":[0,2],
-            "m_aoe_radius":1,
-            "m_isLine":true,
-            "m_classID":0000
+            "m_itemID":1002,
+            "m_name":"Bouse de vache",
+            "m_description":"Un fertiliseur hoors du commun !"
         }
-        ,
-        {
-            "m_attackID":1003,
-            "m_name":"Uppercut",
-            "m_description":"Effectue un uppercut du poing gauche",
-            "m_unlocklvl":3,
-            "m_basedamage":[40],
-            "m_range":[0,1],
-            "m_aoe_radius":1,
-            "m_isLine":true,
-            "m_classID":0000
-        }
-        ,
-        {
-            "m_attackID":1004,
-            "m_name":"Poing mortel",
-            "m_description":"Effectue un coup de poing en visant la carotide. Dommages importants.",
-            "m_unlocklvl":0,
-            "m_basedamage":[60],
-            "m_range":[0,1],
-            "m_aoe_radius":1,
-            "m_isLine":true,
-            "m_classID":0001
-        }
-
     ]
 }
 

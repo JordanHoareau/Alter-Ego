@@ -16,6 +16,8 @@ int main(int argc, char *argv[]){
     Player* Jordy = new Player(j,1,1,1,male,*i,a,questbook,100,0,0,1);
     Jordy->print();
     */
+    Item* i = new Item(1001);
+    std::cout << i->getID() << " " << i->getName() << " - " << i->getDescription() << std::endl;
     GameEngine game;
     game.init("Alter Ego");
 
