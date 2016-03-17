@@ -1,0 +1,20 @@
+{
+    "sellableitems":[
+        {
+            "m_itemID":2001,
+            "m_name":"Bâton du berger",
+            "m_description":"Le bâton de l'ambiance",
+            "m_sellvalue":10,
+            "m_buyvalue":50
+        }
+        ,
+        {
+            "m_itemID":2002,
+            "m_name":"Bouse de vache",
+            "m_description":"Un fertiliseur hoors du commun !",
+            "m_sellvalue":1,
+            "m_buyvalue":5
+        }
+    ]
+}
+
