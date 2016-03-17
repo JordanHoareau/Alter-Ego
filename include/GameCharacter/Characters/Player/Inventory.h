@@ -27,12 +27,12 @@ class Inventory
             for(int i = 0; i < ItemConstant::GearTypesNumber; i++) m_gear[i] = *(new GearItem(0));
         }
         virtual ~Inventory();
-        void updateGearItem(GearItem& g, int qty);
-        void updateQuestItem(Item& q, int qty);
-        void updateConsumableItem(ConsumableItem& c, int qty);
+        void updateGearItem(int id, int qty);
+        void updateQuestItem(int id, int qty);
+        void updateConsumableItem(int id, int qty);
         void updateGold(int g);
-        void unequipGear(GearItem& g);
-        void equipGear(GearItem& g);
+        void unequipGear(int geartype);
+        void equipGear(int id);
         void print();
 
     protected:

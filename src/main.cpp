@@ -10,21 +10,7 @@
 
 int main(int argc, char *argv[]){
     // Player tests
-    /*
-    std::string j = "jordy";
-    Inventory* i = new Inventory();
-    std::array<int,2> a = {1,1};
-    std::vector<Quest> questbook;
-    Player* Jordy = new Player(j,1,1,1,male,*i,a,questbook,100,0,0,1);
-    Jordy->print();
-    */
-    /*ConsumableItem* i = new ConsumableItem(4002);
 
-    std::cout << i->getID() << " " << i->getName() << " - " << i->getDescription() <<
-    " | Buy : " << i->getBuyValue() << " - Sell : " << i->getSellValue() << std::endl <<
-    "Health bonus : " << i->getHealthBonus() << std::endl;*/
-    std::string j = "jordy";
-    Ennemy * e =  new Ennemy(1); e->print();
     GameEngine game;
     game.init("Alter Ego");
 

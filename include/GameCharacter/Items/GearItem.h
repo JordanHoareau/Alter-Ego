@@ -37,6 +37,7 @@ class GearItem : public SellableItem
                         m_strbonus = gearitem_node["m_strbonus"].asInt();
                         m_agibonus = gearitem_node["m_agibonus"].asInt();
                         m_tghbonus = gearitem_node["m_tghbonus"].asInt();
+                        m_isEmpty = gearitem_node["m_isEmpty"].asBool();
                     }
                 }
             }else{return ;}

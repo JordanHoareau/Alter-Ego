@@ -10,7 +10,8 @@
             "m_unlocklvl":0,
             "m_strbonus":0,
             "m_agibonus":0,
-            "m_tghbonus":0
+            "m_tghbonus":0,
+            "m_isEmpty":true
         }
         ,
         {
@@ -23,7 +24,8 @@
             "m_unlocklvl":10,
             "m_strbonus":5,
             "m_agibonus":5,
-            "m_tghbonus":6
+            "m_tghbonus":6,
+            "m_isEmpty":false
         }
         ,
         {
@@ -36,7 +38,8 @@
             "m_unlocklvl":10,
             "m_strbonus":5,
             "m_agibonus":5,
-            "m_tghbonus":6
+            "m_tghbonus":6,
+            "m_isEmpty":false
         }
     ]
 }

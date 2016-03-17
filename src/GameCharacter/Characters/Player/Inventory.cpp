@@ -4,37 +4,47 @@ Inventory::~Inventory()
     //dtor
 }
 
-void Inventory::updateGearItem(GearItem& g, int qty){
-    m_gearslots[g] = m_gearslots[g] + qty;
+void Inventory::updateGearItem(int id, int qty){
+    GearItem* g = new GearItem(id);
+    std::cout<< g->getID() << " is " << g->isEmpty() << std::endl;
+    m_gearslots[*g] += qty;
 }
-void Inventory::updateQuestItem(Item& q, int qty){
-    m_questslots[q]+=qty;
+void Inventory::updateQuestItem(int id, int qty){
+    Item* q = new Item(id);
+    m_questslots[*q]+=qty;
 }
-void Inventory::updateConsumableItem(ConsumableItem& c, int qty){
-    m_consumableslots[c]+=qty;
+void Inventory::updateConsumableItem(int id, int qty){
+    ConsumableItem* c = new ConsumableItem(id);
+    m_consumableslots[*c]+=qty;
 }
 void Inventory::updateGold(int g){
     m_gold+=g;
 }
 
-void Inventory::unequipGear(GearItem& g){
-    if( m_gear[g.getGearType()].getGearType() == 0 ) return;
+void Inventory::unequipGear(int geartype){
+    std::cout << m_gear[geartype].getID() << " is " << m_gear[geartype].isEmpty() << std::endl;
+    if( m_gear[geartype].isEmpty() == true ) std::cout << "Nothing to unequip" << std::endl;
     else{
-        m_gear[g.getGearType()] = *(new GearItem());
-        GearItem* gear = new GearItem(g);
-        updateGearItem(*gear,1);
+        updateGearItem(m_gear[geartype].getID(),1);
+        m_gear[geartype] = *(new GearItem(0));
     }
 
 }
-void Inventory::equipGear(GearItem& g){
-    if( m_gear[g.getGearType()].isEmpty() == true ){
-        m_gear[g.getGearType()] = g;
-        updateGearItem(g,-1);
-    }
-    else{
-        GearItem* gear = new GearItem(m_gear[g.getGearType()]);
-        updateGearItem(*gear,1);
-        m_gear[g.getGearType()] = g;
+void Inventory::equipGear(int id){
+    GearItem* g = new GearItem(id);
+    if(m_gearslots.count(*g) > 0)
+    {
+        if( m_gear[g->getGearType()].isEmpty() == true ){
+        m_gear[g->getGearType()] = *g;
+        updateGearItem(g->getID(),-1);
+        }
+        else{
+            unequipGear(g->getGearType());
+            updateGearItem(g->getID(),-1);
+            m_gear[g->getGearType()] = *g;
+        }
+    }else{
+        std::cout << "Can't equip" << std::endl;
     }
 }
 
