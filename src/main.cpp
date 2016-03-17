@@ -5,6 +5,7 @@
 #include <vector>
 #include <iostream>
 #include <array>
+
 int main(int argc, char *argv[]){
     // Player tests
     /*

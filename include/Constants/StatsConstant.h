@@ -1,7 +1,7 @@
 #ifndef STATSCONSTANT_H
 #define STATSCONSTANT_H
 
-enum Gender {female, male};
+enum Gender {female=0, male};
 enum Class {ranger, warrior};
 enum Weapon {daggers, greatsword};
 

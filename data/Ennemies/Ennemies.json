@@ -1,0 +1,20 @@
+{
+    "ennemies":[
+        {
+            "m_ennemyID":0001,
+            "m_name":"Test"
+            "m_str":1,
+            "m_agi":1,
+            "m_tgh":1,
+            "m_gender":1,
+            "m_classID":1,
+            "m_weaponID":0,
+            "m_lvl":10,
+            "m_loottable":[
+                        {"m_itemID:01","m_rate":0.8},
+                        {"m_itemID:02","m_rate":0.1}
+            ]
+        }
+    ]
+}
+
