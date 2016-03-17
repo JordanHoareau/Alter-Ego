@@ -18,7 +18,7 @@ class GearItem : public SellableItem
             m_tghbonus = g.m_tghbonus;
         }
         GearItem(int id, std::string name, std::string description, int sellvalue, int buyvalue, int geartype, int unlocklvl, int strbonus, int agibonus, int tghbonus, bool isEmpty = false)
-            :   SellableItem(id,name,description,sellvalue,buyvalue){
+            :   SellableItem(id){
             m_geartype = geartype;
             m_unlocklvl = unlocklvl;
             m_strbonus = strbonus;
