@@ -1,14 +1,30 @@
 {
-    "attacks":[
+    "consumableitems":[
         {
-            "m_attackID":0001,
-            "m_name":"Lèche ses plaies",
-            "m_description":"L'instinct animal qui sommeille en vous se réveille afin de vous soigner.",
-            "m_unlocklvl":0,
-            "m_basedamage":[-5,-10,20],
-            "m_range":[0],
-            "m_aoe_radius":1,
-            "m_isLine":true
+            "m_itemID":0,
+            "m_name":"",
+            "m_description":"",
+            "m_sellvalue":0,
+            "m_buyvalue":0,
+            "m_healthbonus":0
+        }
+        ,
+        {
+            "m_itemID":3001,
+            "m_name":"Bâton du berger",
+            "m_description":"Le bâton de l'ambiance",
+            "m_sellvalue":10,
+            "m_buyvalue":50,
+            "m_healthbonus":50
+        }
+        ,
+        {
+            "m_itemID":3002,
+            "m_name":"Bouse de vache",
+            "m_description":"Un fertiliseur hoors du commun !",
+            "m_sellvalue":10,
+            "m_buyvalue":50,
+            "m_healthbonus":50
         }
     ]
 }
