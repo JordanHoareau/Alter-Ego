@@ -28,7 +28,6 @@ void Inventory::unequipGear(GearItem& g){
 }
 void Inventory::equipGear(GearItem& g){
     if( m_gear[g.getGearType()].isEmpty() == true ){
-        GearItem* gear = new GearItem(g);
         m_gear[g.getGearType()] = g;
         updateGearItem(g,-1);
     }
