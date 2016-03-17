@@ -21,7 +21,7 @@ int main(int argc, char *argv[]){
 
     std::cout << i->getID() << " " << i->getName() << " - " << i->getDescription() <<
     " | Buy : " << i->getBuyValue() << " - Sell : " << i->getSellValue() << std::endl <<
-    " Health bonus : " << i->getHealthBonus() << std::endl;
+    "Health bonus : " << i->getHealthBonus() << std::endl;
     GameEngine game;
     game.init("Alter Ego");
 
