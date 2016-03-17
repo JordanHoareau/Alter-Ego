@@ -6,7 +6,15 @@
 #include <iostream>
 #include <array>
 int main(int argc, char *argv[]){
-
+    // Player tests
+    /*
+    std::string j = "jordy";
+    Inventory* i = new Inventory();
+    std::array<int,2> a = {1,1};
+    std::vector<Quest> questbook;
+    Player* Jordy = new Player(j,1,1,1,male,*i,a,questbook,100,0,0,1);
+    Jordy->print();
+    */
     GameEngine game;
     game.init("Alter Ego");
 

@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <array>
+#include <cmath>
 
 #include "GameCharacter/Character.h"
 #include "GameCharacter/Characters/Player/Inventory.h"
@@ -11,16 +12,21 @@
 class Player : public Character
 {
     public:
-        Player(std::string& name, int str, int agi, int tgh, Gender gender, Inventory& inventory, std::array<int,2>& position, std::vector<Quest>& questbook, std::array<int,2>& exp, int classID=0, int weaponID=0, int lvl=1)
+        Player(std::string& name, int str, int agi, int tgh, Gender gender, Inventory& inventory, std::array<int,2>& position, std::vector<Quest>& questbook, int exp, int classID=0, int weaponID=0, int lvl=1)
             :   Character(name, str, agi, tgh, gender,classID,weaponID,lvl){
             m_inventory = *(new Inventory(inventory));
             m_egopoints = 5;
             m_position[0] = position[0]; m_position[1] = position[1];
             m_questbook = questbook;
-            m_exp[0] = exp[0]; m_exp[1] = exp[1];
+            setExperienceCap(m_lvl);
+            earnExperience(exp);
         }
         virtual ~Player();
         Inventory& getInventory(){return m_inventory;}
+
+        void earnExperience(int exp);
+        void setExperienceCap(int lvl);
+        void print();
 
     protected:
 
