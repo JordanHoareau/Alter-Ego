@@ -15,19 +15,19 @@
 class Ennemy : public Character
 {
     public:
-        Ennemy(std::string& name, int str, int agi, int tgh, Gender gender, int ennemyID, int classID, int weaponID, int lvl){
+        Ennemy(int ennemyID){
                 Json::Value root;
                 Json::Reader reader;
-                m_ennemyID = ennemyID;
                 std::ifstream ennemies_file("data\\Ennemies\\Ennemies.json", std::ifstream::binary);
                 // Browsing JSON to find attacks according to level
                 bool AttackparsingSuccessful = reader.parse( ennemies_file, root );
                 if(AttackparsingSuccessful){
-                        const Json::Value ennemies_node = root["ennemies"];
+                    const Json::Value ennemies_node = root["ennemies"];
                     for(unsigned int i = 0; i < ennemies_node.size() ; ++i ){
                         const Json::Value ennemy_node=ennemies_node[i];
                         if(ennemy_node["m_ennemyID"] == ennemyID){
-                            m_name = ennemies_node["m_name"].asString();
+                            m_ennemyID = ennemyID;
+                            m_name = ennemy_node["m_name"].asString();
                             m_caracs[StatsConstant::StrengthID] = ennemy_node["m_str"].asInt();
                             m_caracs[StatsConstant::AgilityID] = ennemy_node["m_agi"].asInt();
                             m_caracs[StatsConstant::ToughnessID] = ennemy_node["m_tgh"].asInt();
@@ -39,25 +39,25 @@ class Ennemy : public Character
                             m_lvl = ennemy_node["m_lvl"].asInt();
                             const Json::Value loottable_node = ennemy_node["m_loottable"];
                             for(unsigned j = 0; j < loottable_node.size(); ++j){
-                                int itemID = loottable_node["m_itemID"].asInt();
-
+                                int itemID = loottable_node[j]["m_itemID"].asInt();
+                                std::cout<< itemID << std::endl;
                                 if(itemID < 2000){
                                         Item* it = new Item(itemID);
-                                        m_lootrate[*it] += loottable_node[j]["m_rate"].asInt();
+                                        m_lootrate[*it] = loottable_node[j]["m_rate"].asFloat();
                                 }else if(itemID < 3000){
                                         SellableItem* it = new SellableItem(itemID);
-                                        m_lootrate[*it] += loottable_node[j]["m_rate"].asInt();
+                                        m_lootrate[*it] = loottable_node[j]["m_rate"].asFloat();
                                 }else if(itemID < 4000) {
                                         GearItem* it = new GearItem(itemID);
-                                        m_lootrate[*it] += loottable_node[j]["m_rate"].asInt();
+                                        m_lootrate[*it] = loottable_node[j]["m_rate"].asFloat();
                                 }else{
                                         ConsumableItem* it = new ConsumableItem(itemID);
-                                        m_lootrate[*it] += loottable_node[j]["m_rate"].asInt();
+                                        m_lootrate[*it] = loottable_node[j]["m_rate"].asFloat();
                                 }
                             }
                         }
                     }
-                }else{ return;}
+                }else{return;}
 
 
         }
@@ -65,16 +65,16 @@ class Ennemy : public Character
         void print(){
             std::cout << "ID : " << m_ennemyID << std::endl
                       << "Loot table" << std::endl;
-            for (std::map<Item, int>::const_iterator ite = m_lootrate.begin(); ite != m_lootrate.end(); ++ite){
-                std::cout << "Name : " << ite->first.getName() << " Rate : " << ite->second << std::endl;
-            }
+                        for (std::map<Item, float>::const_iterator ite = m_lootrate.begin(); ite != m_lootrate.end(); ++ite){
+                            std::cout << "Name : " << ite->first.getName() << " Rate : " << ite->second << std::endl;
+                        }
         }
 
     protected:
 
     private:
         int m_ennemyID;
-        std::map<Item,int> m_lootrate;
+        std::map<Item,float> m_lootrate;
 };
 
 #endif // ENNEMY_H

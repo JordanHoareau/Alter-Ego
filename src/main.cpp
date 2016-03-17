@@ -24,7 +24,7 @@ int main(int argc, char *argv[]){
     " | Buy : " << i->getBuyValue() << " - Sell : " << i->getSellValue() << std::endl <<
     "Health bonus : " << i->getHealthBonus() << std::endl;*/
     std::string j = "jordy";
-    Ennemy * e =  new Ennemy(j,0,0,0,male,1,0,0,1); e->print();
+    Ennemy * e =  new Ennemy(1); e->print();
     GameEngine game;
     game.init("Alter Ego");
 
