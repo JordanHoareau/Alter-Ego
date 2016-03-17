@@ -10,7 +10,7 @@
         }
         ,
         {
-            "m_itemID":3001,
+            "m_itemID":4001,
             "m_name":"Bâton du berger",
             "m_description":"Le bâton de l'ambiance",
             "m_sellvalue":10,
@@ -19,7 +19,7 @@
         }
         ,
         {
-            "m_itemID":3002,
+            "m_itemID":4002,
             "m_name":"Bouse de vache",
             "m_description":"Un fertiliseur hoors du commun !",
             "m_sellvalue":10,
