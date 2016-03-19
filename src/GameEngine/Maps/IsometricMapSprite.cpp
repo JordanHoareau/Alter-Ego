@@ -1,4 +1,4 @@
-#include "IsometricMapSprite.h"
+#include "GameEngine/Maps/IsometricMapSprite.h"
 
 IsometricMapSprite::IsometricMapSprite()
 {

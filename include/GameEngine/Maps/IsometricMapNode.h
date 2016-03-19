@@ -1,6 +1,9 @@
 #ifndef ISOMETRICMAPNODE_H
 #define ISOMETRICMAPNODE_H
 
+#include <SFML/Graphics.hpp>
+#include "GameEngine/Maps/IsometricMapSprite.h"
+#include <list>
 
 class IsometricMapNode
 {

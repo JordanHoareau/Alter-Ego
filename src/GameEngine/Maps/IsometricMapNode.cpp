@@ -1,4 +1,4 @@
-#include "IsometricMapNode.h"
+#include "GameEngine/Maps/IsometricMapNode.h"
 
 IsometricMapNode::IsometricMapNode()
 {
