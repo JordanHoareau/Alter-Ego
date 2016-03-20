@@ -4,8 +4,8 @@ Map::Map(int id){
     m_id = id;
 
     // TEMPORAIRE TEST
-    m_texture.loadFromFile("img/PlayState.png");
-    m_sprite.setTexture(m_texture);
+    m_tileset.loadFromFile("img/PlayState.png");
+    m_sprite.setTexture(m_tileset);
 
 //    m_texture = JSON.getMapFromId(m_id);
 //    m_sprite.setTexture(m_texture);

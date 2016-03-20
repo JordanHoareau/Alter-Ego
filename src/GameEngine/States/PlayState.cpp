@@ -14,7 +14,7 @@ void PlayState::init(int option){
 
 
 //    m_map = getMapFromID(m_context->getCurrentMapID());
-    m_map = new Map();     // TEMPORARY TEST
+    //m_map = new Map();     // TEMPORARY TEST
 }
 
 void PlayState::cleanup(){
@@ -61,6 +61,6 @@ void PlayState::update(GameEngine *game){
 
 void PlayState::draw(GameEngine *game){
     game->m_window.clear();
-    game->m_window.draw(m_map->getSprite());
+//    game->m_window.draw(m_map->getSprite());
     game->m_window.display();
 }
