@@ -10,7 +10,6 @@ void Character::updateStats() {
 }
 
 void Character::updateCaracs(int str, int agi, int tgh) {
-
     m_caracs[StatsConstant::StrengthID] += str;
     m_caracs[StatsConstant::AgilityID] += agi;
     m_caracs[StatsConstant::ToughnessID] += tgh;

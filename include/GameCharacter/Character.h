@@ -16,32 +16,22 @@
 #include <vector>
 using namespace std;
 
-class Character
-{
+class Character {
     public:
-        Character() {
-            for(int i=0; i<StatsConstant::CaracsNumber; i++)
-                m_caracs[i] = 0;
+        Character(){ Character((string)"Unnamed", 0, 0, 0, male); }
 
-            updateStats();
-
-            m_name = "Unnamed";
-            m_gender = male;
-            m_lvl = 0;
-        }
-
-        Character(std::string& name, int str, int agi, int tgh, Gender gender, int classID=0, int weaponID=0, int lvl=1){
+        Character(std::string name, int str, int agi, int tgh, Gender gender, int classID=0, int weaponID=0, int lvl=1){
                      // Identification attributes
             m_name = name;
             m_gender = gender;
 
             // Battle attributes
             m_lvl = lvl;
-            m_currentHealth = m_stats[StatsConstant::HealthID];
             m_caracs[StatsConstant::StrengthID] = str;
             m_caracs[StatsConstant::AgilityID] = agi;
             m_caracs[StatsConstant::ToughnessID] = tgh;
-            updateStats();                                          // get stats from caracteristics
+            updateStats();
+            m_currentHealth = m_stats[StatsConstant::HealthID];                                          // get stats from caracteristics
             m_stamina = 100;
             m_energy = 100;
             m_classID = classID;
@@ -180,11 +170,6 @@ class Character
             // Offbattle attributes
             m_gold = 0;
         }     //      New character
-
-        Character(int saveID) {
-
-        //    m_attr = JSON.getCharacterFromSaveFromId(saveID);
-        }
 
         void updateStats();
         void updateCaracs(int str, int agi, int tgh);

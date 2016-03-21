@@ -12,7 +12,7 @@
 class Player : public Character
 {
     public:
-        Player(std::string& name, int str, int agi, int tgh, Gender gender, Inventory& inventory, std::array<int,2>& position, std::vector<Quest>& questbook, int exp, int classID=0, int weaponID=0, int lvl=1)
+        Player(std::string name, int str, int agi, int tgh, Gender gender, Inventory& inventory, std::array<int,2>& position, std::vector<Quest>& questbook, int exp, int classID=0, int weaponID=0, int lvl=1)
             :   Character(name, str, agi, tgh, gender,classID,weaponID,lvl){
             m_inventory = *(new Inventory(inventory));
             m_egopoints = 5;
