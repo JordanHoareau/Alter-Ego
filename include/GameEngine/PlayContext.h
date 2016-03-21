@@ -25,7 +25,7 @@ class PlayContext {
     private:
         static PlayContext m_PlayContext;
         static Character m_player;
-        static int m_currentMapID;
+        int m_currentMapID;
 };
 
 #endif // PLAYCONTEXT_H

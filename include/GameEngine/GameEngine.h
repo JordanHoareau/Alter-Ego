@@ -14,7 +14,7 @@ class GameEngine
 {
     public:
         ~GameEngine(){}
-        void init(const sf::String title, int width=1280, int height=720);
+        void init(const sf::String title, int width=1280, int height=960);
         void cleanup();
 
         void changeState(GameState *state, int option=0);

@@ -4,9 +4,8 @@ PlayContext PlayContext::m_PlayContext;
 
 void PlayContext::init(){
     cout << "       PlayContext - Init" << endl;
-
-    //set Character
-    //set current map
+    //set Character0
+    m_currentMapID = 0;
 }
 
 int PlayContext::loadFromSave(int id){

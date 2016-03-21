@@ -4,6 +4,11 @@ PlayState PlayState::m_PlayState;
 
 void PlayState::init(int option){
     cout << "   PlayState - Init" << endl;
+    Map* mymap = new Map(0);
+
+    mymap->load((string) "data\\Tiles\\tileset.png");
+    m_map = mymap;
+
 
     m_context = PlayContext::instance();
 //    @option 0 means initialization, 1-2-3 is the number of the save the be loaded
@@ -61,6 +66,6 @@ void PlayState::update(GameEngine *game){
 
 void PlayState::draw(GameEngine *game){
     game->m_window.clear();
-//    game->m_window.draw(m_map->getSprite());
+    game->m_window.draw(*m_map);
     game->m_window.display();
 }
