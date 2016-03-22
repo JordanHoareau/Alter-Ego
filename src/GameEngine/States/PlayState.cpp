@@ -6,7 +6,7 @@ void PlayState::init(int option){
     cout << "   PlayState - Init" << endl;
     Map* mymap = new Map(0);
 
-    mymap->load((string) "data\\Tiles\\tileset.png");
+    mymap->load((string) "data\\Tiles\\tile.png");
     m_map = mymap;
 
 
