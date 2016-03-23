@@ -4,9 +4,9 @@ PlayState PlayState::m_PlayState;
 
 void PlayState::init(int option){
     cout << "   PlayState - Init" << endl;
-    Map* mymap = new Map(0);
+    Map* mymap = new Map();
 
-    mymap->load((string) "data\\Tiles\\tile.png", (string) "data\\Tiles\\tile.png");
+    mymap->load(0);
     m_map = mymap;
 
 
