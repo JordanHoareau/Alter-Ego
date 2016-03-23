@@ -147,13 +147,6 @@ int Map::load(int id){
                     quad[3].texCoords = sf::Vector2f(tu, tv+MapsConstant::TILE_HEIGHT);
                 }
 
-
-            return true;
-//>>>>>>> origin/feature-maps
-        }
-
-
-
     ///////////////////////////////////////
     //  ROOT LOADING
 
