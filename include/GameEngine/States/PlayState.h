@@ -4,6 +4,7 @@
 #include "Constants/GameStateConstant.h"
 #include "GameState.h"
 #include "GameEngine/PlayContext.h"
+#include "World/Map.h"
 
 class PlayState : public GameState {
     public:
@@ -28,7 +29,12 @@ class PlayState : public GameState {
     protected:
         static PlayState m_PlayState;
         PlayContext *m_context;
+
+        void reactMapEvent(MapEvent event);
+
         Map *m_map;
+        vector<Map> m_mainMaps;
+        vector<Map> m_subMaps;
 };
 
 #endif // PLAYSTATE_H

@@ -4,9 +4,9 @@ PlayState PlayState::m_PlayState;
 
 void PlayState::init(int option){
     cout << "   PlayState - Init" << endl;
-    Map* mymap = new Map(0);
+    Map* mymap = new Map();
 
-    mymap->load((string) "data\\Tiles\\tileset.png");
+    mymap->load(0);
     m_map = mymap;
 
 
@@ -14,8 +14,9 @@ void PlayState::init(int option){
 //    @option 0 means initialization, 1-2-3 is the number of the save the be loaded
     if(option==0)
         m_context->init();
-    else if(option>0 && option<4)
+    else if(option>0 && option<4){
         m_context->loadFromSave(option);
+    }
 
 
 //    m_map = getMapFromID(m_context->getCurrentMapID());
@@ -37,6 +38,7 @@ void PlayState::resume(){
 void PlayState::handleEvents(GameEngine *game){
 
     sf::Event event;
+    MapEvent returnMapEvent;
 
     while(game->m_window.pollEvent(event)){
         switch(event.type){
@@ -52,10 +54,19 @@ void PlayState::handleEvents(GameEngine *game){
                         break;
                 }
                 break;
+            case sf::Event::MouseButtonReleased:
+                returnMapEvent = m_map->handleEvents(event.mouseButtonEvent);
+                this.reactMapEvent(returnMapEvent);
+                break;
             default:
                 break;
         }
     }
+}
+
+void PlayState::reactMapEvent(MapEvent event) const{
+
+    cout << "Gestion de l'event ! " << endl;
 }
 
 void PlayState::update(GameEngine *game){
