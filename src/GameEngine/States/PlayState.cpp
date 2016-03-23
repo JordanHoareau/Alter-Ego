@@ -6,7 +6,7 @@ void PlayState::init(int option){
     cout << "   PlayState - Init" << endl;
     Map* mymap = new Map();
 
-    mymap->load(0);
+    mymap->load(2);
     m_map = mymap;
 
 

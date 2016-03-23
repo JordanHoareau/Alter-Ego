@@ -17,10 +17,23 @@ void Map::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
 int Map::load(int id){
 
+            Json::Value root;
+            Json::Reader reader;
+            std::ifstream maps_file("data\\Maps\\Maps.json", std::ifstream::binary);
+            bool MapparsingSuccessful = reader.parse( maps_file, root );
+            if(MapparsingSuccessful){
+                m_groupMapID = root["mapsID"][id]["m_groupMapID"].asInt();
+                m_mapCoords[0] = root["mapsID"][id]["m_mapCoords"][0].asInt();
+                m_mapCoords[1] = root["mapsID"][id]["m_mapCoords"][1].asInt();
+            }
+            std::cout << "GroupMapID : " << m_groupMapID << std::endl << "Coordonnées Map : ["<<m_mapCoords[0]<<","<<m_mapCoords[1]<<"]"<< std::endl;
             //  DEV : TileMap filled with 0
             int tiles[MapsConstant::MAPSIZE];
             for(int i=0 ; i < MapsConstant::MAPSIZE ; i++) tiles[i] = 0;
-            if (!m_tileset.loadFromFile((string) "data\\Tiles\\tile.png"))
+            std::string path = "data\\Tiles\\";
+            path.append(root["mapsID"][id]["m_tileset"].asString());
+            path.append(".png");
+            if (!m_tileset.loadFromFile( path ))
                 return false;
 
             ///////////////////////////////////////
