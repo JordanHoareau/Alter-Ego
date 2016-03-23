@@ -26,9 +26,9 @@ int Map::load(int id){
                 m_mapCoords[1] = root["mapsID"][id]["m_mapCoords"][1].asInt();
             }
             std::cout << "GroupMapID : " << m_groupMapID << std::endl << "Coordonnées Map : ["<<m_mapCoords[0]<<","<<m_mapCoords[1]<<"]"<< std::endl;
-            //  DEV : TileMap filled with 0
             int tiles[MapsConstant::MAPSIZE];
-            for(int i=0 ; i < MapsConstant::MAPSIZE ; i++) tiles[i] = 0;
+            for(int i=0 ; i < MapsConstant::MAPSIZE ; i++) tiles[i] = root["mapsID"][id]["m_map"][i].asInt();
+            for(int i=0 ; i < MapsConstant::MAPSIZE ; i++) m_interactions[i] = root["mapsID"][id]["m_interactions"][i].asInt();
             std::string path = "data\\Tiles\\";
             path.append(root["mapsID"][id]["m_tileset"].asString());
             path.append(".png");

@@ -27,7 +27,7 @@ class Map : public sf::Drawable, public sf::Transformable{
         sf::VertexArray m_floor;                        //  Floor :                          Z = 0    (walkable - under character)
         sf::VertexArray m_rootEnvironment;              //  RootEnvironment :                Z = 1    (non-walkable)
         sf::VertexArray m_frontEnvironment;             //  FrontEnvironment :               Z = 2    (walkable - over character)
-
+        int m_interactions[MapsConstant::MAPSIZE];
 
         vector<Character> m_neutrals;                   //  NPC to load on the map
 
