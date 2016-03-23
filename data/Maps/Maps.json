@@ -1,0 +1,39 @@
+{
+    "mapsID":[
+        {
+            "mapID":0,
+            "m_groupMapID":0,
+            "m_mapCoords":[0,0],
+            "m_tileset":"foret"
+        }
+        ,
+        {
+            "mapID":1,
+            "m_groupMapID":0,
+            "m_mapCoords":[0,1],
+            "m_tileset":"desert"
+        }
+        ,
+        {
+            "mapID":2,
+            "m_groupMapID":0,
+            "m_mapCoords":[1,0],
+            "m_tileset":"foret"
+        }
+        ,
+        {
+            "mapID":3,
+            "m_groupMapID":0,
+            "m_mapCoords":[-1,0],
+            "m_tileset":"foret"
+        }
+        ,
+        {
+            "mapID":4,
+            "m_groupMapID":0,
+            "m_mapCoords":[0,-1],
+            "m_tileset":"foret"
+        }
+    ]
+}
+

@@ -5,6 +5,8 @@
 #include "GameCharacter/Character.h"
 #include "Constants/MapsConstant.h"
 #include <vector>
+#include <JSonParser/json-forwards.h>
+#include <JSonParser/json.h>
 using namespace std;
 
 class Map : public sf::Drawable, public sf::Transformable{
