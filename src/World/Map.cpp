@@ -5,7 +5,6 @@ Map::Map(int id){
 
     // TEMPORAIRE TEST
     m_tileset.loadFromFile("img/PlayState.png");
-    m_sprite.setTexture(m_tileset);
 
 //    m_texture = JSON.getMapFromId(m_id);
 //    m_sprite.setTexture(m_texture);
