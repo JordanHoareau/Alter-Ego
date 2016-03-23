@@ -30,7 +30,7 @@ class PlayState : public GameState {
         static PlayState m_PlayState;
         PlayContext *m_context;
 
-        void reactMapEvent(int m_returnMapEvent);
+        void reactMapEvent(int event) const;
 
         Map *m_map;
         vector<Map> m_mainMaps;

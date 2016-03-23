@@ -15,7 +15,7 @@ class Map : public sf::Drawable, public sf::Transformable{
         //  MAP LOADING
         //  string tileset : "path\\yourtileset.png"
         int load(int id);
-
+        int handleClick(int x, int y) const;
     protected:
 
         int m_groupMapID;                               //  GroupMap ID : Number to use for JSON load
