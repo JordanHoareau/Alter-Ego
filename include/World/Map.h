@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include "GameCharacter/Character.h"
 #include "Constants/MapsConstant.h"
+#include "GameEngine/MapEvent.h"
 #include <vector>
 #include <JSonParser/json-forwards.h>
 #include <JSonParser/json.h>
@@ -17,7 +18,7 @@ class Map : public sf::Drawable, public sf::Transformable{
         //  MAP LOADING
         //  string tileset : "path\\yourtileset.png"
         int load(int id);
-        int handleClick(int x, int y) const;
+        MapEvent handleClick(int x, int y) const;
     protected:
 
         int m_groupMapID;                               //  GroupMap ID : Number to use for JSON load

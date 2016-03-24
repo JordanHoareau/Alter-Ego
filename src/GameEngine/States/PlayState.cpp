@@ -38,7 +38,8 @@ void PlayState::resume(){
 void PlayState::handleEvents(GameEngine *game){
 
     sf::Event event;
-    int returnMapEvent;
+    MapEvent myMapEvent;
+    int id=0;
 
     while(game->m_window.pollEvent(event)){
         switch(event.type){
@@ -55,8 +56,8 @@ void PlayState::handleEvents(GameEngine *game){
                 }
                 break;
             case sf::Event::MouseButtonReleased:
-                returnMapEvent = m_map->handleClick(event.mouseButton.x, event.mouseButton.y);
-                this->reactMapEvent(returnMapEvent);
+                myMapEvent = m_map->handleClick(event.mouseButton.x, event.mouseButton.y);
+                this->reactMapEvent(myMapEvent, id);
                 break;
             default:
                 break;
@@ -64,9 +65,10 @@ void PlayState::handleEvents(GameEngine *game){
     }
 }
 
-void PlayState::reactMapEvent(int event) const{
+void PlayState::reactMapEvent(MapEvent& event, int id) const{
 
     cout << "Gestion de l'event ! " << endl;
+    event.print();
 }
 
 void PlayState::update(GameEngine *game){
