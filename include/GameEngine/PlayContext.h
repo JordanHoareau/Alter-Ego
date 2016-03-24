@@ -15,12 +15,24 @@ class PlayContext {
         ~PlayContext() {}
         void init();
         int loadFromSave(int id);
+
         int getCurrentMapID(){
             return m_currentMapID;
         }
+        void setCurrentMapID(int id){
+            m_currentMapID = id;
+        }
+
         static PlayContext* instance() {
             return &m_PlayContext;
         }
+
+        //DEVTEST !!
+        void changeMap(){
+            m_currentMapID = (m_currentMapID+1)%3;
+        }
+
+
 
     private:
         static PlayContext m_PlayContext;
