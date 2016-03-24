@@ -27,6 +27,9 @@ class Player : public Character
         void earnExperience(int exp);
         void setExperienceCap(int lvl);
         void print();
+        bool isMoving(){
+            return !(m_position[0]==m_destination[0] && m_position[1]==m_destination[1]);
+        }
 
     protected:
 
@@ -34,6 +37,7 @@ class Player : public Character
         Inventory m_inventory;
         int m_egopoints;
         std::array<int,2> m_position;
+        std::array<int,2> m_destination;
         std::vector<Quest> m_questbook;
         std::array<int,2> m_exp;
 
