@@ -39,7 +39,6 @@ void PlayState::handleEvents(GameEngine *game){
 
     sf::Event event;
     MapEvent myMapEvent;
-    int id=0;
 
     while(game->m_window.pollEvent(event)){
         switch(event.type){
@@ -51,13 +50,15 @@ void PlayState::handleEvents(GameEngine *game){
                     case sf::Keyboard::Left:
                         game->changeState(GameStateConstant::IntroState);
                         break;
+                    case sf::Keyboard::Right:
+                        m_context->changeMap();
                     default:
                         break;
                 }
                 break;
             case sf::Event::MouseButtonReleased:
                 myMapEvent = m_map->handleClick(event.mouseButton.x, event.mouseButton.y);
-                this->reactMapEvent(myMapEvent, id);
+                this->reactMapEvent(myMapEvent);
                 break;
             default:
                 break;
@@ -65,16 +66,22 @@ void PlayState::handleEvents(GameEngine *game){
     }
 }
 
-void PlayState::reactMapEvent(MapEvent& event, int id) const{
-
-    cout << "Gestion de l'event ! " << endl;
-    event.print();
+void PlayState::reactMapEvent(MapEvent& event) const{
+    cout << "Gestion de l'event ! " << event.getFlag() << endl;
+    switch(event.getFlag()){
+        case 0:
+            // Move the player to event.getDestination()
+            break;
+        case 1:
+            break;
+        default:
+            break;
+    }
 }
 
 void PlayState::update(GameEngine *game){
-//    if(m_map->getID() != m_context->getCurrentMapID())
-//        m_map = getMapFromID(m_context->getCurrentMapID());
-
+    if(m_map->getID() != m_context->getCurrentMapID())
+        m_map->load(m_context->getCurrentMapID());
 }
 
 void PlayState::draw(GameEngine *game){
