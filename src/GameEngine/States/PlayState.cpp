@@ -8,6 +8,7 @@ void PlayState::init(int option){
 
     mymap->load(2);
     m_map = mymap;
+    m_viewNeeded=true;
 
 
     m_context = PlayContext::instance();

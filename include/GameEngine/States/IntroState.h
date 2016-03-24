@@ -23,7 +23,6 @@ class IntroState : public GameState {
         static IntroState* instance() {
             return &m_IntroState;
         }
-
     private:
         static IntroState m_IntroState;
         sf::Sprite m_sprite;

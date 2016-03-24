@@ -49,6 +49,10 @@ void GameEngine::changeState(GameState *state, int option){
     // store and init the new state
     states.push_back(state);
     states.back()->init(option);
+    if( states.back()->isViewNeeded() ){
+        sf::View mapView(sf::FloatRect(32,80,1280,960));
+        m_window.setView(mapView);
+    }
 }
 
 //        Change the state using its constant index

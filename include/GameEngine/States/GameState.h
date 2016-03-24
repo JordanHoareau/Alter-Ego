@@ -25,6 +25,9 @@ class GameState {
             state.print(flux) ;
             return flux;
         }
+        bool isViewNeeded(){return m_viewNeeded;}
+    protected:
+        bool m_viewNeeded;
 };
 
 #endif // GAMESTATE_H

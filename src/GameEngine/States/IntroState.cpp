@@ -7,7 +7,7 @@ void IntroState::init(int option){
 
     if(!m_texture.loadFromFile("img/IntroState.png"))
         cout << "   IntroState - Image loading error" << endl;
-
+    m_viewNeeded=false;
     m_sprite.setTexture(m_texture);
 }
 

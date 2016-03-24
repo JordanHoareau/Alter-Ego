@@ -35,6 +35,7 @@ class PlayState : public GameState {
         Map *m_map;
         vector<Map> m_mainMaps;
         vector<Map> m_subMaps;
+
 };
 
 #endif // PLAYSTATE_H
