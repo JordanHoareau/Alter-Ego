@@ -17,7 +17,7 @@ class Map : public sf::Drawable, public sf::Transformable{
 
         //  MAP LOADING
         //  string tileset : "path\\yourtileset.png"
-        int getID(int id){return m_mapID;}
+        int getID(){return m_mapID;}
         int load(int id);
         MapEvent handleClick(int x, int y) const;
     protected:
