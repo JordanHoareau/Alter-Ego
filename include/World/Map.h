@@ -17,10 +17,11 @@ class Map : public sf::Drawable, public sf::Transformable{
 
         //  MAP LOADING
         //  string tileset : "path\\yourtileset.png"
+        int getID(int id){return m_mapID;}
         int load(int id);
         MapEvent handleClick(int x, int y) const;
     protected:
-
+        int m_mapID;
         int m_groupMapID;                               //  GroupMap ID : Number to use for JSON load
         int m_mapCoords[2];
 

@@ -20,24 +20,25 @@ int Map::load(int id){
     std::ifstream maps_file("data\\Maps\\Maps.json", std::ifstream::binary);
     bool MapparsingSuccessful = reader.parse( maps_file, root );
     if(MapparsingSuccessful){
+        m_mapID = id;
         m_groupMapID = root["mapsID"][id]["m_groupMapID"].asInt();
         m_mapCoords[0] = root["mapsID"][id]["m_mapCoords"][0].asInt();
         m_mapCoords[1] = root["mapsID"][id]["m_mapCoords"][1].asInt();
-    }
+    }else{std::cout << reader.getFormattedErrorMessages() << std::endl;}
     std::cout << "GroupMapID : " << m_groupMapID << std::endl << "Coordonnées Map : ["<<m_mapCoords[0]<<","<<m_mapCoords[1]<<"]"<< std::endl;
-    int tiles[MapsConstant::MAPSIZE];
-    for(unsigned int i=0 ; i < MapsConstant::MAPSIZE ; i++) tiles[i] = root["mapsID"][id]["m_map"][i].asInt();
     for(unsigned int i=0 ; i < MapsConstant::MAPSIZE ; i++) m_interactions[i] = root["mapsID"][id]["m_interactions"][i].asInt();
     std::string path = "data\\Tiles\\";
     path.append(root["mapsID"][id]["m_tileset"].asString());
     path.append(".png");
     if (!m_tileset.loadFromFile( path ))
         return false;
+    int tiles[MapsConstant::MAPSIZE];
 
     ///////////////////////////////////////
     //  FLOOR LOADING
 
     // Vertices : set shape to Quads and number of m_ground = numberoftiles*4 (4 m_ground/Quads)
+    for(unsigned int i=0 ; i < MapsConstant::MAPSIZE ; i++) tiles[i] = root["mapsID"][id]["m_floor"][i].asInt();
     m_floor.setPrimitiveType(sf::Quads);
     m_floor.resize(MapsConstant::MAPSIZE * 4);
 
@@ -74,6 +75,7 @@ int Map::load(int id){
     //  ROOT LOADING
 
     // Vertices : set shape to Quads and number of vertices = numberoftiles*4 (4 vertices/Quads)
+    for(unsigned int i=0 ; i < MapsConstant::MAPSIZE ; i++) tiles[i] = root["mapsID"][id]["m_root"][i].asInt();
     m_rootEnvironment.setPrimitiveType(sf::Quads);
     m_rootEnvironment.resize(MapsConstant::MAPSIZE * 4);
 
@@ -111,6 +113,7 @@ int Map::load(int id){
     //  FRONT LOADING
 
     // Vertices : set shape to Quads and number of vertices = numberoftiles*4 (4 vertices/Quads)
+    for(unsigned int i=0 ; i < MapsConstant::MAPSIZE ; i++) tiles[i] = root["mapsID"][id]["m_front"][i].asInt();
     m_frontEnvironment.setPrimitiveType(sf::Quads);
     m_frontEnvironment.resize(MapsConstant::MAPSIZE * 4);
 
