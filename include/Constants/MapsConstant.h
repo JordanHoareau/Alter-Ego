@@ -4,8 +4,8 @@
 #include <string>
 
 namespace MapsConstant {
-    unsigned const int WIDTH = 53;
-    unsigned const int HEIGHT = 21;
+    unsigned const int WIDTH = 41;
+    unsigned const int HEIGHT = 25;
     unsigned const int MAPSIZE = WIDTH*HEIGHT;
     unsigned const int TILESET_WIDTH = 10;
     unsigned const int TILESET_HEIGHT = 10;
