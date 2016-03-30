@@ -1,4 +1,4 @@
-#include "World/Map.h"
+#include "GameEngine/World/Map.h"
 
 void Map::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     // Apply transformation
@@ -152,13 +152,7 @@ int Map::load(int id){
 }
 
 MapEvent Map::handleClick(int x, int y) const{
-    // Traitement sur (x,y)
-    // Déterminer la case/pixel cliqué
-    // Return
-    //  -1 : Rien ! (pourquoi tu cliques sur le decor ?)
-    //  0 : Déplacement, gogogo
-    //  1 : Character detected !
-    //  2 : Interactive detected !
+    std::array<int,2> pos_clicked;
     MapEvent *myMapEvent = new MapEvent(0, x, y);
     return *myMapEvent;
 }

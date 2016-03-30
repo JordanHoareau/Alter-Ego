@@ -13,12 +13,9 @@ class MapEvent
         MapEvent(int flag, int id);         //  Constructor idEvent
         virtual ~MapEvent();
 
-        int getFlag(){
-            return m_flagReturn;
-        }
-        std::array<int,2> getDestination(){
-            return m_posEvent;
-        }
+        int getFlag(){                      return m_flagReturn;    }
+        std::array<int,2> getDestination(){ return m_posEvent;      }
+        int getID(){                        return m_idReturn;      }
     private:
         int m_flagReturn;
         int m_idReturn;
