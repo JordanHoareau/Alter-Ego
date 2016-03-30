@@ -69,6 +69,7 @@ void PlayState::handleEvents(GameEngine *game){
 
 void PlayState::reactMapEvent(MapEvent& event) const{
     cout << "Gestion de l'event ! " << event.getFlag() << endl;
+    cout << "poxels : (" << event.getDestination()[0] << "," << event.getDestination()[1] << ")" << endl;
     switch(event.getFlag()){
         case 0:
             // Move the player to event.getDestination()
