@@ -52,8 +52,8 @@ int Map::load(int id){
             int tv = (tileNumber/MapsConstant::TILESET_WIDTH);
 
             // Tile position to set on screen
-            int x = j*MapsConstant::TILE_WIDTH/2;
-            int y = (i * MapsConstant::TILE_HEIGHT/2) + (MapsConstant::TILE_HEIGHT/4)*(j%2);
+            int x = j*MapsConstant::TILE_WIDTH +(i%2)*MapsConstant::TILE_WIDTH/2;
+            int y = (i * MapsConstant::TILE_HEIGHT/4);
 
             // Get effective m_floor[4]
             sf::Vertex* quad = &m_floor[(j + i * MapsConstant::WIDTH) * 4];
@@ -90,8 +90,8 @@ int Map::load(int id){
             int tv = (tileNumber/MapsConstant::TILESET_WIDTH);
 
             // Tile position to set on screen
-            int x = j*MapsConstant::TILE_WIDTH/2;
-            int y = (i * MapsConstant::TILE_HEIGHT/2) + (MapsConstant::TILE_HEIGHT/4)*(j%2);
+            int x = j*MapsConstant::TILE_WIDTH +(i%2)*MapsConstant::TILE_WIDTH/2;
+            int y = (i * MapsConstant::TILE_HEIGHT/4);
 
             // Get effective m_rootEnvironment[4]
             sf::Vertex* quad = &m_rootEnvironment[(j + i * MapsConstant::WIDTH) * 4];
@@ -128,8 +128,8 @@ int Map::load(int id){
             int tv = (tileNumber/MapsConstant::TILESET_WIDTH);
 
             // Tile position to set on screen
-            int x = j*MapsConstant::TILE_WIDTH/2;
-            int y = (i * MapsConstant::TILE_HEIGHT/2) + (MapsConstant::TILE_HEIGHT/4)*(j%2);
+            int x = j*MapsConstant::TILE_WIDTH +(i%2)*MapsConstant::TILE_WIDTH/2;
+            int y = (i * MapsConstant::TILE_HEIGHT/4);
 
             // Get effective frontEnvironment[4]
             sf::Vertex* quad = &m_frontEnvironment[(j + i * MapsConstant::WIDTH) * 4];

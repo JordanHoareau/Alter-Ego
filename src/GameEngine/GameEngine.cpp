@@ -50,7 +50,7 @@ void GameEngine::changeState(GameState *state, int option){
     states.push_back(state);
     states.back()->init(option);
     if( states.back()->isViewNeeded() ){
-        sf::View mapView(sf::FloatRect(32,80,1280,960));
+        sf::View mapView(sf::FloatRect(32,48,1280,960));
         m_window.setView(mapView);
     }
 }
