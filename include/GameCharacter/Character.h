@@ -183,7 +183,21 @@ class Character
 
         Character(int saveID) {
 
-        //    m_attr = JSON.getCharacterFromSaveFromId(saveID);
+            Json::Value root;
+            Json::Reader reader;
+            // ------------------------
+            // STANDARD ATTACK LOAD
+            // ------------------------
+            std::ifstream save_file("data\\Save\\Save.json", std::ifstream::binary);
+
+            bool SaveParsingSuccessful = reader.parse( save_file, root );
+            const Json::Value save_node = root["saves"][saveID];
+            if ( !SaveParsingSuccessful )
+            {
+
+            }
+
+            //    m_attr = JSON.getCharacterFromSaveFromId(saveID);
         }
 
         void updateStats();

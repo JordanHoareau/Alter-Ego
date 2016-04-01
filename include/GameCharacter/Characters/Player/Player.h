@@ -21,6 +21,9 @@ class Player : public Character
             setExperienceCap(m_lvl);
             earnExperience(exp);
         }
+        Player(int ID)
+            :   Character(ID){
+        }
         virtual ~Player();
         Inventory& getInventory(){return m_inventory;}
 
