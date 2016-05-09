@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[]){
     // Player tests
-    Character p = *(new Character(0));
+    Player p = *(new Player(0));
     GameEngine game;
     game.init("Alter Ego");
 

@@ -48,6 +48,11 @@ void Inventory::equipGear(int id){
     }
 }
 
+void Inventory::setGear(int id){
+    GearItem* g = new GearItem(id);
+    m_gear[g->getGearType()] = *g;
+}
+
 void Inventory::print(){
 
     std::cout <<    "Inventory : " << std::endl <<

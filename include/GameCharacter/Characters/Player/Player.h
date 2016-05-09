@@ -37,17 +37,42 @@ class Player : public Character
             if ( !SaveParsingSuccessful )
             {
                 // report to the user the failure and their locations in the document.
-                std::cout  << "Failed to parse Default\n"
+                std::cout  << "Failed to parse Save\n"
                            << reader.getFormattedErrorMessages();
                 return;
             }
+
+            // EGO POINTS LOAD
+            m_egopoints = save_node["m_egopoints"].asInt();
+
+
+            // INVENTORY LOAD
             m_inventory = *(new Inventory());
-            m_inventory.updateGold(save_node["m_inventory"]["m_gold"].asInt());
+            const Json::Value inventory_node = save_node["m_inventory"];
+            m_inventory.updateGold(inventory_node["m_gold"].asInt());
+
 
             const Json::Value gearitems_node = save_node["m_inventory"]["m_gearslots"];
             for(unsigned int i = 0; i < gearitems_node.size(); i++){
                 m_inventory.updateGearItem(gearitems_node[i][0].asInt() ,gearitems_node[i][1].asInt() );
             }
+
+            const Json::Value consumableitems_node = save_node["m_inventory"]["m_consumableslots"];
+            for(unsigned int i = 0; i < consumableitems_node.size(); i++){
+                m_inventory.updateConsumableItem(consumableitems_node[i][0].asInt() ,consumableitems_node[i][1].asInt() );
+            }
+
+            const Json::Value questitems_node = save_node["m_inventory"]["m_questslots"];
+            for(unsigned int i = 0; i < questitems_node.size(); i++){
+                m_inventory.updateQuestItem(questitems_node[i][0].asInt() ,questitems_node[i][1].asInt() );
+            }
+
+
+            const Json::Value gear_node = save_node["m_inventory"]["m_gear"];
+            for(unsigned int i = 0; i < gear_node.size(); i++){
+                m_inventory.setGear(gear_node[i].asInt());
+            }
+            m_inventory.print();
         }
         virtual ~Player();
         Inventory& getInventory(){return m_inventory;}

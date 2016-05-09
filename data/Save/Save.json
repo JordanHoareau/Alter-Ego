@@ -20,15 +20,13 @@
             "m_classID":1,
             "m_weaponID":1,
             "m_exp":120,
-            "m_inventory":[
-                {
-                    "m_gold":1000,
+            "m_inventory":{
+                    "m_gold":1010,
                     "m_gearslots": [[3001,2] , [3002,4]],
                     "m_consumableslots" : [[4001,10],[4002,1]],
                     "m_questslots":[[1001,1]],
-                    "m_gear":[3001,3001,3001,3001,3002,3002]
-                }
-            ],
+                    "m_gear":[3001,3002]
+            },
             "m_egopoints":5,
             "m_position":[10,10],
             "m_destination":[5,5]

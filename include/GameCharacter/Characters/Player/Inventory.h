@@ -33,6 +33,7 @@ class Inventory
         void updateGold(int g);
         void unequipGear(int geartype);
         void equipGear(int id);
+        void setGear(int id);
         void print();
 
     protected:

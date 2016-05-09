@@ -34,7 +34,7 @@
             "m_description":"Un fertiliseur hoors du commun !",
             "m_sellvalue":10,
             "m_buyvalue":50,
-            "m_geartype":1,
+            "m_geartype":2,
             "m_unlocklvl":10,
             "m_strbonus":5,
             "m_agibonus":5,
