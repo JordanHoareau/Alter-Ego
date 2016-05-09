@@ -23,6 +23,31 @@ class Player : public Character
         }
         Player(int ID)
             :   Character(ID){
+            setExperienceCap(m_lvl);
+
+            Json::Value root;
+            Json::Reader reader;
+            // ------------------------
+            // STANDARD SAVE LOAD
+            // ------------------------
+            std::ifstream save_file("data\\Save\\Save.json", std::ifstream::binary);
+
+            bool SaveParsingSuccessful = reader.parse( save_file, root );
+            const Json::Value save_node = root["saves"][ID];
+            if ( !SaveParsingSuccessful )
+            {
+                // report to the user the failure and their locations in the document.
+                std::cout  << "Failed to parse Default\n"
+                           << reader.getFormattedErrorMessages();
+                return;
+            }
+            m_inventory = *(new Inventory());
+            m_inventory.updateGold(save_node["m_inventory"]["m_gold"].asInt());
+
+            const Json::Value gearitems_node = save_node["m_inventory"]["m_gearslots"];
+            for(unsigned int i = 0; i < gearitems_node.size(); i++){
+                m_inventory.updateGearItem(gearitems_node[i][0].asInt() ,gearitems_node[i][1].asInt() );
+            }
         }
         virtual ~Player();
         Inventory& getInventory(){return m_inventory;}
